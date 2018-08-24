@@ -1,0 +1,159 @@
+Introducción
+Algoritmos de Ordenamiento y Búsqueda
+11 Aug 2018
+Tags: 2018, theory
+
+Santiago Chio
+Developer, Sistemas UAdeC
+schio@uadec.edu.mx
+http://schiob.com
+@schiob
+
+* Detalles de la clase
+
+- Grupo de Whats (844 196 75 81)
+- Lenguaje
+- Puntualidad
+- Participación
+
+
+* Temario (el de la carta)
+* 
+
+- Algoritmos de ordenamiento básicos
+
+1. Burbuja
+2. Inserción
+3. Selección
+
+- Algoritmos de ordenamiento avanzados
+1. Shell
+2. MergeSort
+3. RadixSort
+4. BinSort
+5. QuickSort
+
+- Algoritmos de búsqueda
+1. Secuencial
+2. Secuencial Indexada
+3. Binaria
+4. Hashing
+
+* Temario (detallado)
+
+* Pre-clase
+
+Lo vamos a aprender y usar durante la clase para mandar ejercicios.
+
+- Git
+- Github
+
+* Introducción
+
+- Algoritmos, su rol en computación
+- Por qué analizar y diseñar algoritmos?
+- Por qué algoritmos de ordenamiento?
+
+* Algoritmos Básicos
+
+- Insertion sort
+- Análisis y diseño de algoritmos (Big O notation)
+- Otros algoritmos de búsqueda (Burbuja, selección)
+
+* Algoritmos intermedios
+
+- Divide-and-conquer approach
+- Recursividad
+- MergeSort
+- Heaps y Heapsort
+- QuickSort
+- Sorting in linear time (Radix, bucket sort)
+
+* Búsqueda y demás
+
+- Secuencial (trivial)
+- Búsqueda binaria
+- Tablas hash 
+
+* Extras
+
+- Programación dinámica
+- Estructuras de datos avanzadas
+- Algoritmos aplicados a Grafos
+
+* Forma de evaluar
+
+- 30 Ejercicios (entregados en github)
+- 15 Primer Parcial
+- 15 Segundo Parcial
+- 30 Ordinario
+
+* Algoritmos y su rol en computación
+
+* Algoritmos
+
+Es cualquier procedimiento computacional bien definido, que toma valores como entrada y genera una salida.
+
+.code intro.go /start function/,/end function/ 
+.play intro.go /start main/,/end main/
+
+* Algoritmos
+
+Una herramienta para resolver un problema computacional específico.
+
+Este problema especifica en terminos generales la relación de la entrada y salida deseada.
+
+Por ejemplo:
+
+Tengo una lista de los nombres de los alumnos de la facultad, quiero saber el nombre que más se repite
+
+.play intro1.go /start main/,/end main/
+
+* Implementación 1
+
+.code intro1.go /start func 1/,/end func 1/
+
+* Implementación 2
+
+.code intro1.go /start func 2/,/end func 2/
+
+* 
+
+.image https://media.giphy.com/media/5Zesu5VPNGJlm/giphy.gif _ 600
+
+** Por qué analizar y diseñar algoritmos?
+
+* Demostrar que tu solución termina y es correcta
+
+Aunque las computadoras fueran infinítamente rápidas aún así tendríamos que demostrar que la solución que proponemos es correcta.
+
+.image https://media.giphy.com/media/Rkis28kMJd1aE/giphy.gif _ 600
+
+* Comprobar la eficiencia del algoritmo
+
+Las computadoras son rápidas pero no infinítamente rápidas y la memoria es barata pero no gratis.
+
+Un buen diseño de un algoritmo ahorra recursos y por defecto dinero.
+
+.image https://media.giphy.com/media/5NGfijqwsN7ry/giphy.gif _ 600
+
+* 
+
+.image https://media.giphy.com/media/1M9fmo1WAFVK0/giphy.gif _ 600
+
+** Ok, pero por qué algoritmos de ordenamiento y búsqueda???
+
+* Ordenamiento?
+
+Muchos consideran el ordenamiento como el problema fundamental in el estudio de algoritmos
+
+- A veces una aplicación tiene que ordenar información de forma inherente
+- Muchos algoritmos ordenan como parte de una subrutina clave
+- Hay una gran cantidad de algoritmos de ordenamiento que emplean diferentes técnicas interesantes de estudiar.
+- Muchos problemas de ingeniería computacional salen a la luz al implementar algoritmos de ordenamiento. Muchos de esos problemas se resuelven mejor viéndolos desde el lado algoritmico en lugar de cambiar x linea y ver qué pasa.
+
+* "Tarea"
+
+- Preparen su habiente de desarrollo (Java, Python, Javascript, Go, Ruby, lo que quieran)
+- Instalen git y APRENDAN a usarlo
+- Hagan su cuenta en github y APRENDAN a usarlo
