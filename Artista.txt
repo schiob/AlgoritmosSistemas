@@ -1,0 +1,57 @@
+package exposicionproyecto;
+public class Artista extends Exposicion implements CambiaPrecio{
+    private String NombreArtista,Estilo;
+    private int PrecioSalida;
+
+    public Artista(String NombreArtista, String Estilo, int PrecioSalida, String Titulo, String Descripcion, int FechaInaguracion, int FechaClausura) {
+        super(Titulo, Descripcion, FechaInaguracion, FechaClausura);
+        this.NombreArtista = NombreArtista;
+        this.Estilo = Estilo;
+        this.PrecioSalida = PrecioSalida;
+    }
+
+
+    public String getNombreArtista() {
+        return NombreArtista;
+    }
+
+    public void setNombreArtista(String NombreArtista) {
+        this.NombreArtista = NombreArtista;
+    }
+
+    public String getEstilo() {
+        return Estilo;
+    }
+
+    public void setEstilo(String Estilo) {
+        this.Estilo = Estilo;
+    }
+
+    public int getPrecioSalida() {
+        return PrecioSalida;
+    }
+
+    public void setPrecioSalida(int PrecioSalida) {
+        this.PrecioSalida = PrecioSalida;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "\nArtista" + 
+                "\nNombreArtista=" + NombreArtista + 
+                "\nEstilo=" + Estilo + 
+                "\nPrecioSalida=" + PrecioSalida;
+    }
+
+    @Override
+    public void CambiaPrecio(int precio) throws Error {
+      if (precio>10000){
+        throw new Error ("precio < 10000");}
+	else
+		this.setPrecioSalida(PrecioSalida);
+	}
+    
+    }
+    
+    
+
