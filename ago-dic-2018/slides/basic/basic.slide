@@ -1,0 +1,40 @@
+Algoritmos Básicos
+Algoritmos de Ordenamiento y Búsqueda
+24 Aug 2018
+Tags: 2018, theory
+
+Santiago Chio
+Developer, Sistemas UAdeC
+schio@uadec.edu.mx
+http://schiob.com
+@schiob
+
+* Insertion Sort
+
+.image insertion_sort.png
+
+* 
+
+.code insertion.go /start insertionSort/,/end insertionSort/ 
+.play insertion.go /start main/,/end main/ 
+
+* Cómo demostramos que éste algoritmo es correcto?
+
+.image https://media.giphy.com/media/WUGNg3FuhiywU/giphy.gif _ 600
+
+* Ciclo invariante
+
+Algún predicado o condición que se mantiene en cada iteración de un ciclo.
+
+Propiedades:
+
+- Inicialización: Es verdadera antes de la primera iteración.
+- Mantenimiento: Es verdadera despues de cada iteración del ciclo y se mantiene verdadera antes de la siguiente iteración.
+- Terminación: Cuando finaliza el ciclo, la invariante aporta una propiedad que indica que el algoritmo es correcto.
+
+* Viendo estas propiedades en insertion Sort
+El sub-arreglo `arr[1:j-1]` consiste en los elementos originales de `arr[1:j-1]` pero en orden.
+
+- Inicialización: Cuando j = 2, el subarreglo `arr[1:1]` es de un elemento, por lo tanto está ordenado
+- Mantenimiento: El algoritmo mueve `arr[j-1]`, `arr[j-2]`, `arr[j-3]`, ... una posición a la derecha hasta que encuentra el lugar de `arr[j]`, en ese punto lo inserta. Al final de la iteración el subarreglo `arr[1:j]` tiene los elementos originales pero ordenados. 
+- Terminación: Al final como `j-1` es el último elemento del arreglo, podemos determinar que todo el arreglo está ordenado y por lo tanto el algoritmo es correcto.
