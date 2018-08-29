@@ -21,7 +21,7 @@ public class Pokimon {
         for (int i = 1; i < a.length; i++) {
             int q=a[i];
             int j=i-1;
-            while (j!=-1&&q<a[j]) {
+            while (j!=-1&&q>a[j]) {
                 a[j+1]=a[j];
                 j--;
             }
