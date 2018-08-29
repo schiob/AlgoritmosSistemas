@@ -1,0 +1,71 @@
+Notación asintótica
+Algoritmos de Ordenamiento y Búsqueda
+29 Aug 2018
+Tags: 2018, theory
+
+Santiago Chio
+Developer, Sistemas UAdeC
+schio@uadec.edu.mx
+http://schiob.com
+@schiob
+
+* Notación Asintótica
+
+Es una herramienta matemática para medir la tasa de cresimiento de funciones.
+
+Que en términos de diseño de algoritmos es la forma en que el costo del tiempo o espacio de un programa escalan con el tamaño de la entrada.
+
+- Por qué?
+
+Porque diferentes computadoras funcionan a diferentes velocidades y queremos analizar si un algoritmo es mejor que otro sin medir el tiempo con un hardware en específico.
+
+* Big-O 
+
+Una función f(x) pertenece a O(g(x)) cuando existe una constante positiva c tal que a partir de un valor x0, f(x) no sobrepasa a cg(x).
+
+.image https://wikimedia.org/api/rest_v1/media/math/render/svg/4df2167dc6e8059c370d39cfd197681b580c98a5 _ 600
+
+.image https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif _ 500
+
+* Big-O para mortales
+
+La forma de representar cuánto es lo *máximo* que puede tomarle a un algoritmo correr en relación a su entrada. 
+
+Es un límite superior.
+
+- O(1) — Constant Time
+
+- O(n) - Linear time complexity
+
+- O(log n) - Logarithmic time complexity
+
+- O(n^2) - Quadratic time complexity
+
+* Types
+
+.image https://tutorialbazar.com/wp-content/uploads/2018/04/Aymptotic-Notations.png _ 900
+
+* Pasos para calcular Big-O
+
+- Cualquier declaración simple (Linea de código) cuesta O(1).
+- Costos mas grandes son resultado de loops o llamadas a funciones pesadas.
+- Sumar todos los costos y el mas grande gana.
+
+Ejemplo:
+
+.code sumto.go /start f3 /,/end f3/
+
+* 
+
+.code sumto.go /start f2 /,/end f2/
+
+.code sumto.go /start f1 /,/end f1/
+
+* 
+
+.play sumto.go /start main /,/end main/
+
+* Otras notaciones
+
+- Ω(n)
+- Θ(n)
