@@ -42,7 +42,7 @@ func sumTo3(n int) int {
 
 // start main OMIT
 func main() {
-	n := 100000
+	n := 1000000
 
 	start := time.Now()
 	fmt.Print(sumTo(n))
