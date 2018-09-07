@@ -10,7 +10,7 @@ public class Dinosaurios
 		
 		System.out.println("Nombres de los dinosaurios separados con un espacio:");
 		lista=s.nextLine();
-		
+		 
 		for(int i=0;i<lista.length();i++)
 		{
 			n=i;
@@ -36,7 +36,7 @@ public class Dinosaurios
 			
 			while(a[g]!=null&&g<a.length)
 			{
-				if(a[g].length()<a[i].length())
+				if(a[g].length()<a[min].length())
 				{
 					min=g;
 				}
