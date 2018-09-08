@@ -1,0 +1,47 @@
+Divide and conquer
+Algoritmos de Ordenamiento y Búsqueda
+11 Aug 2018
+Tags: 2018, theory
+
+Santiago Chio
+Developer, Sistemas UAdeC
+schio@uadec.edu.mx
+http://schiob.com
+@schiob
+
+* Recursion
+
+Muchos algoritmos son recursivos en la estructura. Se llaman a si mismo una o más veces para lidiar con subproblemas relacionados.
+
+Estos algoritmos hacen una práctica de divide y vencerás. 
+
+Rompen el problema en subproblemas que son similares al original pero más pequeños, se solucionan los subproblemas recursivamente, y luego se combinan esas soluciones para solucionar el problema original.
+
+* 
+
+- Dividir el problema en subproblema que son pequeñas instancias del problema original.
+
+- Resuelve los subproblemas de forma recursiva. Si son lo sificientemente pequeños soluciónalo de forma convencional.
+
+- Combina las soluciones del subproblema en la solución del problema original.
+
+* Merge Sort
+
+- Dividir la secuencia de *n* elementos en 2 subsecuencias de *n/2*.
+
+- Ordena las 2 subsecuencias de forma recursiva usando merge sort.
+
+- Combina las 2 subsecuencias ordenadas para producir la secuencia ordenada.
+
+La recursion se detiene cuando la secuencia a ordenar es de 1 elemento.
+
+* 
+
+.image https://idea-instructions.com/merge-sort.png _ 900
+
+* 
+.code merge.go /start merge/,/end merge/ 
+
+* 
+.code merge.go /start mergeSort/,/end mergeSort/
+.play merge.go /start main/,/end main/
