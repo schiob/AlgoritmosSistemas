@@ -5,7 +5,7 @@ public class Dinos {
 
     public static void main(String[] args) {
       Scanner sc= new Scanner (System.in);
-      String nombre ="";
+      String nombre_dino ="";
       int numero=0;
         System.out.println("Numero de Dinos");
         numero=sc.nextInt();
@@ -14,8 +14,8 @@ public class Dinos {
         System.out.println("Nombre de Cada Dinosaurio:");
         
         for (int i = 0; i < NOMBRE.length; i++) {
-            nombre=sc.nextLine();
-            NOMBRE[i]=nombre;
+            nombre_dino=sc.nextLine();
+            NOMBRE[i]=nombre_dino;
                 }
             for (int i = 0; i < NOMBRE.length; i++) {
                 System.out.println(NOMBRE[i]);

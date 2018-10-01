@@ -28,7 +28,7 @@ public class alfabeticamente {
         
         System.out.println("\n Orden Alfabeticamente: "); 
         for(int i=0; i<CADENA.length; i++) {
-         System.out.println( " A[" + i + "] = " + CADENA[i] ); 
+         System.out.println(CADENA[i]); 
         } 
     }
 }
