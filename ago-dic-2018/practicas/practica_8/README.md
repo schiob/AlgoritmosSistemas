@@ -1,9 +1,9 @@
 # Práctica 8 - Buscando, pero ahora buscamos ciclos
 
-El granjero Bob ya vendió sus vacas, resulta que eran demaciado problemáticas. Ahora solo tiene Truchas, muchas, muchas truchas de diferentes edades en varios estanques. Esos estanques están conectados unos con otros con pequeños riachuelos, donde las truchas más pequeñas en los estanques chicos pueden viajar a estanques más grandes cuando crecen, pero esos riachuelos son de un solo sentido, para que las truchas grandes no puedan ir a los estanques pequeños y comerse a sus hermanos pequeños :( . 
-Bob tiene **N** estanques en su granja identificados con números desde el **0** a **N-1**. Estos estanques están conectados por **E** riachuelos. 
+El granjero Bob ya vendió sus vacas, resulta que eran demasiado problemáticas. Ahora solo tiene Truchas, muchas, muchas truchas de diferentes edades en varios estanques. Esos estanques están conectados unos con otros con pequeños riachuelos, donde las truchas más pequeñas en los estanques chicos pueden viajar a estanques más grandes cuando crecen, pero esos riachuelos son de un solo sentido, para que las truchas grandes no puedan ir a los estanques pequeños y comerse a sus hermanos pequeños :( . 
+Bob tiene **N** estanques en su granja identificados con números desde el **0** a **N-1**. Estos estanques están conectados por **E** riachuelos.
 
-Asegúrate de que no haya ninguna forma de que hay aun camino en que las truchas puedan regresar a un estanque en el que estaban antes.
+Asegúrate de que no haya ninguna forma de que en un camino las truchas puedan regresar a un estanque en el que estaban antes.
 
 ### Input
 
