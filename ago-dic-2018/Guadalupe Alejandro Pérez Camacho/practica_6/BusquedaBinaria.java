@@ -12,43 +12,27 @@ import java.util.*;
 public class BusquedaBinaria {
     public static void main(String[]args){
         Scanner s= new Scanner(System.in);
-        String a [] = {"a","a12","b2","text2","text2a","text2a2","text2a12"};
-        String b;
-        int n;
-        System.out.println("Numero de palabras");
-        n=Integer.parseInt(s.next());
-        System.out.println("Palabra a buscar");
-        b=s.next();
-        busquedaBinaria(a,b,n);
+        String [] ss=s.nextLine().split(" ");
+        int n=Integer.parseInt(ss[0]);
+        String b=ss[1];
+        String a [] = new String[n];
+        ss=s.nextLine().split(" ");
+        for (int i = 0; i < a.length; i++) {
+            a [i] = ss[i];
+        }
+        System.out.println(busquedaBinaria(a,b,0,a.length));
     }
-    public static void busquedaBinaria(String x [],String y, int z){
-        String a []=x;
-        String b=y;
-        int start=0,end=z-1,mid=0;
-        boolean found=false;
-        while (found!=true&&start<=end) {
-            mid=(int)((start+end)/2);
-            System.out.println(mid+" "+start+" "+end);
-            if (b.compareTo(a[mid])==0) {
-                found=true;
-            }
-            else{
-                if (b.compareTo(a[mid])<0) {
-                    end=mid;
-                }
-                if (b.compareTo(a[mid])>0) {
-                    start=mid;
-                }
-            }
-        }
-        if (b.compareTo(a[z-1])==0) {
-            found=true;
-        }
-        if (found==true) {
-            System.out.println(mid+1);
-        }
-        if (found==false) {
-            System.out.println(-1);
+    public static int busquedaBinaria(String a[],String n,int Low,int High){
+        if (High < Low)
+            return -1; //Caso base. No se encuentra el elemento
+        else {
+            int middle = (Low+High) / 2;
+            if (n.compareTo(a[middle])<0&&n.length()<a[middle].length())
+                return busquedaBinaria(a, n, Low, middle-1);
+            else if (n.compareTo(a[middle])>0&&n.length()>a[middle].length())
+                return  busquedaBinaria(a, n, middle + 1, High);
+            else
+                return middle+1;  //Case base. Posicion del elemento
         }
     }
 }
