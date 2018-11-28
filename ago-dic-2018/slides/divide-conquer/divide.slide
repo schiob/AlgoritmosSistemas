@@ -45,3 +45,9 @@ La recursion se detiene cuando la secuencia a ordenar es de 1 elemento.
 * 
 .code merge.go /start mergeSort/,/end mergeSort/
 .play merge.go /start main/,/end main/
+
+*
+.image https://i.redd.it/r875l55fzhz11.png
+
+*
+.image https://i.redd.it/ke79d99ynaz11.png
