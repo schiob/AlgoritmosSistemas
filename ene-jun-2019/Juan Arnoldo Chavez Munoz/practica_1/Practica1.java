@@ -5,8 +5,9 @@ package algoritmosorden;
  import java.util.Scanner;
 public class Practica1 {
     public static void main(String[] args) {
-        Scanner s= new Scanner (System.in);
 int  v1=0, v2=0;
+        Scanner s= new Scanner (System.in);
+
 System.out.println("Ingresa un numero:");
 v1= s.nextInt();
 System.out.println("Ingresa un numero:");
