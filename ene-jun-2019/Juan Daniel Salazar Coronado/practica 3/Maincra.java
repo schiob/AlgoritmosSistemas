@@ -19,6 +19,7 @@ public class Maincra
         
         int n;
         boolean bandera = true;
+        boolean bandera2 = true;
         
         System.out.println("¿Cuantos objetos tiene en su inventario?");
         n = s.nextInt();
@@ -47,6 +48,18 @@ public class Maincra
             nombres[i] = s.next();
             System.out.print("Cuanto tiene de " + nombres[i] +" : ");
             numdeobj[i] = s.nextInt();
+            while(bandera2 == true)
+            {
+                if(n >= 1 && n <= 100)
+                {
+                    bandera2 = false;
+                }
+                else
+                {
+                    System.out.println("Solo puede tener de 1 a 100 elementos del mismo objeto, introduzca la cantidad de nuevo:");
+                    numdeobj[i] = s.nextInt();
+                }
+            }
             contador++;
             
             System.out.println("");//solo se pasa un espacio por estetica
