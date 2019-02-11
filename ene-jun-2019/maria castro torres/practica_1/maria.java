@@ -5,18 +5,17 @@ import javax.swing.JOptionPane;
 public class Practica1 {
 	public static void main(String[]args) {
 		
+             Scanner sc=new Scanner (System.in);
 		//definir variables
+		int v1=0, v2=0;
 		
-	int v1=0, v2=0, suma=0;
-	
-	
-	v1=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el primer numero"));
-	v2=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el segundo numero"));
-	
-	suma=v1+v2;
-	{
-		System.out.println("Los numeros de entrada son:" +"\n"+ v1 + "\n" + v2 + "\n" +"La suma de los numeros de entrada es:" + suma);
+		System.out.print("Introduzca el primer numero entero: " +"\n");
+		v1= sc.nextInt();
+		
+		System.out.print("Introduzca el segundo numero entero: " + "\n");
+		v2 = sc.nextInt();
+		
+		System.out.print("La suma de los numeros de entrada es: " + (v1+v2));
+		
 	}
-	}
-
 }
