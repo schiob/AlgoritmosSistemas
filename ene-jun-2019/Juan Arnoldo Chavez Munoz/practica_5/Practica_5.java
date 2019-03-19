@@ -79,6 +79,7 @@ public class Practica_5 {
       
     public static void main (String[] args) {
         Scanner s = new Scanner (System.in);
+        
         System.out.println("Ingrese el numero de palabras y después la palabra a buscar: "); 
        int num = s.nextInt();
         s.nextLine(); //pasa de linea para que entre al sig. nextLine
@@ -93,18 +94,14 @@ public class Practica_5 {
         // System.out.println(Arrays.toString(palabras2)); Muestra la lista de palabras ya ordenadas
   
           int results=0;
-    for (int i = 0; i < palabras2.length; i++)
-{
-    results = binarysearch(palabras2, pal, 0, palabras2.length-1);
+          results = binarysearch(palabras2, pal, 0, palabras2.length-1);
     if (results >= 0) {
-        System.out.println(pal + " está en el indice " + (results+1));
-        break;
-    }
-    else {
+        System.out.println(pal + " está en el indice " + (results+1)); 
+                            }//cierre if
+    else  {
         System.out.println(results);
-        break;
-    }
-}
-    }
+             }//else
+
+    }// cierre Main
     
 }
