@@ -37,7 +37,10 @@ public class Tarea2 {
         String extraLine=s.nextLine();
         String calificacion=s.nextLine();
         String[] hamburguesas=calificacion.split(" ");
-        insertion(conversor(hamburguesas));
+        if(numHamburgruesas==hamburguesas.length)
+            insertion(conversor(hamburguesas));
+        else
+            System.err.println("El Numero de hamburguesas no coincide con el num de calificaciones");
     }
     
     public static int[] conversor(String[] x){
