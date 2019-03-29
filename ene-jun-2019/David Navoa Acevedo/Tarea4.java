@@ -23,7 +23,7 @@ public class Tarea4 {
         String[] resultado=new String[(a.length+b.length)];
         int i=0,j=0,k=0;
         while(i<a.length && j<b.length){
-            if (a[i].length()<=b[j].length()) {
+            if (a[i].compareTo(b[j])<0 || a[i].compareTo(b[j])==0) {
                 resultado[k]=a[i];
                 i++;
                 k++;
