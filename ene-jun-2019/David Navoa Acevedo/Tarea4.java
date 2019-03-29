@@ -8,6 +8,7 @@ package Tareas;
 import java.util.Arrays;
 import java.util.Scanner;
 public class Tarea4 {
+    
     public static String[] merge(String[] x){
         if (x.length>1) {
             int z=x.length/2;
@@ -49,21 +50,23 @@ public class Tarea4 {
     }
     
     public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int n;
-        String temp;
-            System.out.println("digite el numero de palabras que desea"
-                + " seguido de un enter y despues las palabras a ordenar señor"
-                + " separadas cada una con un espacio");
-            n=s.nextInt();
-            String[] palabras=new String[n];
-             temp=s.nextLine(); // este es el string que se comera el next
+        
+            System.out.println("Cuantas palabras deseas ordenar?");
+            n = s.nextInt();
+            System.out.println("Declare las palabras seguidas de un espacio cada una");
+            String[] palabras = new String[n];
+            String temp = s.nextLine(); // Esta es la Linea del numero de palabras
             String palabra=s.nextLine();
             palabras=palabra.split(" ");
-            palabras= merge(palabras);
-            for(String a: palabras){
+            if(n == palabras.length){
+                palabras = merge(palabras);
+                for(String a: palabras){
                 System.out.print(a+" ");
             }
-       
+            }
+            else 
+                System.out.println("La cantidad de palabras no coincide");
     }
 }
