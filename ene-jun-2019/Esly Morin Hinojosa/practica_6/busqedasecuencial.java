@@ -27,7 +27,7 @@ public class busqedasecuencial
 			  {
 				  for(l=0;l<x[i][j][k].length;l++)
 				  {
-					  x[i][j][k][l]=(int)(Math.random()*750+1);
+					  x[i][j][k][l]=sc.nextInt();
 				  }
 			  }
 		  }
