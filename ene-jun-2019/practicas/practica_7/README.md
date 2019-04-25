@@ -28,7 +28,7 @@ Imprime a salida estandar **STDOUT** las islas que tiene que atravezar Susana pa
 
 #### Entrada
 ```
-15 20 5
+16 20 5
 0 1
 0 2
 0 3
