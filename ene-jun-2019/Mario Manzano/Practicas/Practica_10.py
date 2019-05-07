@@ -42,7 +42,6 @@ a = [e for e in range(1,m+1)]
 c = 0
 
 for e in comb(a,n):
-    print(e,sum(e),len(set(perm(e))))
     if sum(e) == x:
         c += len(set(perm(e)))
 
