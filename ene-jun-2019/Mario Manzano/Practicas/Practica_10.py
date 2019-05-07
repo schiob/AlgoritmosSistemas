@@ -43,6 +43,6 @@ c = 0
 
 for e in comb(a,n):
     if sum(e) == x:
-        c += len(set(perm(e)))
+        c += len(list(perm(e))) if all(el == e[0] for el in e) else len(set(perm(e)))
 
 print(c)
