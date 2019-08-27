@@ -41,9 +41,15 @@ Es un límite superior.
 
 - O(n^2) - Quadratic time complexity
 
-* Types
+* Big Theta
 
-.image https://tutorialbazar.com/wp-content/uploads/2018/04/Aymptotic-Notations.png _ 900
+.image https://cdncontribute.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-1.png _ 300 
+
+* Big O
+.image https://cdncontribute.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-2.png _ 300
+
+* Big Omega
+.image https://cdncontribute.geeksforgeeks.org/wp-content/uploads/AlgoAnalysis-3.png _ 300
 
 * Pasos para calcular Big-O
 
