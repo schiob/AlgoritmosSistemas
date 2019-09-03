@@ -1,0 +1,52 @@
+public class practica1;
+public static void main (String[]args){
+Scanner entrada=new Scanner(System.in);
+int arreglo[]=new int[20];
+int num_pares=0;
+int num_impares=0;
+
+System.out.println("");
+for(int i=0; i<10;i++){
+System.out.print ((i+1)+".ingrese los numeros:");
+arreglo[i]=entrada.nextInt();
+
+
+if (arreglo[i] % 2==0){
+num_pares++;
+}
+
+else{
+num_impares++;
+}
+}
+
+ int par[]=new int[num_pares];
+int impar[]=new int [num_impares];
+
+
+num_pares=0;
+num_impares=0;
+
+
+for(int i=0; i<10;i++){
+if (arreglo[i] % 2==0){
+par[num_pares]=arreglo[i];
+num_pares++;
+}
+else{
+impar[num_impares]=arreglo[i];
+num_impares++;
+}
+}
+System.out.print("\n arreglo pares");
+for(int i=0; i<num_pares;i++){
+System.out.println(par[i]+" -");
+
+}
+System.out.print("\n arreglo impares");
+for(int i=0; i<num_impares;i++){
+System.out.println(impar[i]+" -");
+}
+System.out.println("");
+}
+}
