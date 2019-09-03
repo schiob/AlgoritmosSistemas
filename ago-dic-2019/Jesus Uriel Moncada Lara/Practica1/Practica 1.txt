@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Practica1 {
+    public static void main(String args[]){     
+        Scanner sc = new Scanner(System.in);
+        int [] arreglo = new int[20];
+        
+        for(int i =0;i<20; i++)
+        {
+            arreglo[i] = sc.nextInt();
+            
+        }
+        for(int i =19;i>0; i--){
+            if (arreglo[i]%2==0){
+         System.out.println(arreglo[i]);
+         }            
+        }
+}
+}
+
