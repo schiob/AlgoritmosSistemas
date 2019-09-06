@@ -1,0 +1,61 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Select_Sort {
+
+	public static void main(String[] args) {
+		
+
+		
+		Scanner s=new Scanner(System.in);
+		Random aleatorio = new Random();
+		
+		System.out.println("Metodo Ordenamiento Select sort \n ");
+		System.out.print("Cantidad de numeros: ");
+		int num=s.nextInt();
+		int arr[]= new int[num];
+		for(int i=0;i<num;i++)
+		{
+			arr[i]=aleatorio.nextInt(100);
+			System.out.print("["+arr[i]+"]");
+		}//cierre del for random
+		
+		long TInicio, TFin;//Variables para determinar el tiempo de ejecución
+  		double tiempo;
+  		TInicio = System.currentTimeMillis();//cuenta los milisegundos 
+		
+		System.out.println("\n"+"\nNumeros Ordenados");
+		for(int i=0;i<arr.length-1;i++)
+		{
+		int aux = i;//se_asigna_laPosicion_del _primer_for
+		for(int j=i+1;j < arr.length;j++)
+		{
+			if(arr[j]<arr[aux])
+			{
+				aux=j;      //si_la_la_posicion_"J"_es_menor_que_la_posicion_"i"
+			}              // aux_toma_la_posicion_"j"
+			
+		}//primer ciclo
+		
+		   int tempo = arr[i];
+		   arr[i] = arr[aux];
+		   arr[aux] = tempo;
+		
+		}//segundo ciclo
+		
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.print("("+arr[i]+")");
+		}//cierre del for imprimir
+		
+		
+		System.out.println("\n");
+		TFin = System.currentTimeMillis(); //Tomamos la hora en que finalizó el algoritmo y la almacenamos en la variable T
+	    tiempo = ((TFin - TInicio)/1000); //Calculamos los milisegundos de diferencia
+		float min=(float) (tiempo/60);
+		//System.out.println("Segundos: " + tiempo);
+	    System.out.println("Tardo: " + min +" Minuto(S)");
+		
+	}//cierre del main
+
+}//cierre de clase
