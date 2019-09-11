@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+import javax.swing.JoptionPane;
+
+
+public class pratica2{
+public static void main(String args){
+	
+Scanner entrada=new Scanner(System.in);
+ 
+  int arreglo[]problemas, mi,pos;
+	
+	
+	
+problemas=Integer.parseInt(JoptionPane.showInputDialog("ingrese el numeros problemas hechos"));
+	
+	
+arreglo=new int(problemas);
+	
+	
+System.out.println("ingrese el tamaño del arreglo");
+	
+for(int i=0;i < problemas;i++){
+		
+System.out.println((i+1)+".ingrese los minutos: ");
+		
+arreglo[i]=entrada.nextInt();
+	}
+	
+	
+for(int i=0;i < problemas;i++){
+		
+pos=i;
+		
+mi=arreglo[i];
+		
+		
+while((pos>0)&& (arreglo[pos-1]> mi){
+			
+arreglo[pos]=arreglo[pos-1];
+		
+	pos--;
+		}
+		
+arreglo[pos]=mi;
+}
+
+for(int i=0;i < problemas;i++){
+	
+	System.out.println(arreglo[i]+ "-");
+
+}
+
+System.out.println("");
+
+}
+
+}
