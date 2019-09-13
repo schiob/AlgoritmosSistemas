@@ -6,15 +6,11 @@ public class practica2 {
 		Scanner s = new Scanner(System.in);
 		
 		int n=0,a=0, temp;
-
-
 		n=Integer.parseInt(JOptionPane.showInputDialog(null, "Cantidad de problemas a hacer"));
-		
-		
 		a=Integer.parseInt(JOptionPane.showInputDialog(null, "Tiempo"));
 		int [] derf= new int [n];
 		for(int i=0; i<derf.length; i++) {
-			derf[i]= Integer.parseInt(JOptionPane.showInputDialog(null,"Tiempo x problema"+(i+1)));
+			derf[i]= Integer.parseInt(JOptionPane.showInputDialog(null,"Tiempo x problema "+(i+1)));
 		}
 		int i;
 		for ( i=0; i<derf.length; i++) {
