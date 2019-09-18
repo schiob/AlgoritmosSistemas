@@ -1,22 +1,20 @@
- 
-# Función para hacer ordenación por inserción
-def insertionSort(arr): 
-  
-    # Atraviesa 1 para len (arr)
-    for i in range(1, len(arr)): 
-  
-        key = arr[i] 
-        # Mover elementos de arr [0..i-1], que son 
-        # mayores que la clave, a una posición adelante 
-        # de su posición actual
-        j = i-1
-        while j >=0 and key < arr[j] : 
-                arr[j+1] = arr[j] 
-                j -= 1
-        arr[j+1] = key 
-  # Código de controlador para probar arriba
-arr = ["5.- Parasaurolophus", "3.- Oviraptor","1.- Minmi", "2.- Troodon" ,"4.- Wannanosaurus"] 
-insertionSort(arr) 
-print ("acomodo por nombre mas corto a nombre mas largo") 
-for i in range(len(arr)): 
-    print (arr[i]) 
+a=[]
+p=int(input("Dame la cantidad de problemas: "))
+m=int(input("Dame los minutos disponibles que tienes:" ))
+for F in range (b):
+	u=int(input())
+	a.append(u)	
+for F in range (1, len(a)):
+	z= a[F]
+	j= F-1
+	while j>=0 and z<a[j]:
+		a[j+1]=a[j]
+		j=j-1
+	a[j+1]=z
+count=0
+
+for F in range(b):
+	if R>=a[F] and R>=0:
+		count=count+1
+		R=R-a[F]
+print("cuantos problemas puede hacer: ", count)
