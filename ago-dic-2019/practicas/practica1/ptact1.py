@@ -1,5 +1,0 @@
-#print("Dame los numeros: ")
-numb=int(input("Dame los numeros: "))
-print ("Estos son los numeros: ",numb)
-#n=int(n)
-#print("Nueros",n)
