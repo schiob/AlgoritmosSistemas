@@ -1,0 +1,68 @@
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
+public class Parcial_uno {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Ingrese el numero de peliculas");
+        int n=sc.nextInt();
+        VectorParcial_uno w=new VectorTitulo(n);
+        w.generar(sc);
+        System.out.println("w");
+        System.out.println("Ordenando por duracion");
+        w.mergeSortPorduracion(0,w.v.length);
+public class VectorTitulo_pelicula {
+    Scanner sc=new Scanner(System.in);
+    Titulo_pelicula[]v;
+    public Vector_pelicula(int n){
+        v=new Titulo_pelicula[n];
+    }
+    public String toString() {
+        return Arrays.toString(v);
+    }
+    public void generar(Scanner sc){
+        Random r =new Random();
+        for (int i = 0; i <v.length; i++) {
+            System.out.println("Titulo_pelicula"+(i+1)+"\t");
+            System.out.println("Titulo_pelicula");
+            String nom_pel=sc.next();
+            int duracion=r.nextInt(5);
+            v[i]=new Titulo_pelicula(nom_pel,duracion);
+            
+        }
+    }
+public void mergeSortPorduracion(int menor,int mayor){
+    int j;
+    int i;
+    if (mayor>1) {
+        i=mayor/2;
+        j=mayor-i;
+        mergeSortPorduracion(menor,i);
+        mergeSortPorduracion(menor+i,j);
+        merge(menor,i,j);
+    }
+}
+private void merge(int primero,int i,int j){
+    Titulo aux[]=new Titulo[i+j];
+    int temp=0;
+    int temp1=0;
+    int temp2=0;
+    while (temp1<1 && temp2<j){
+        if (v[temp1].getduracion()<v[primero+i+temp2].getduracion()) {
+           aux[temp++]=v[primero+(temp2++)]; 
+        }else{
+           aux[temp++]=v[primero+(temp2++)];  
+        }
+        
+    }
+    while (temp1<i){
+        aux[temp++]=v[primero+(temp1++)];
+    }
+    while (temp2<j){
+        aux[temp++]=v[primero+(temp2++)];
+    }
+    for (int k = 0; k < 10; k++) {
+        v[primero+k]=aux[k];
+    }
+}
+}
