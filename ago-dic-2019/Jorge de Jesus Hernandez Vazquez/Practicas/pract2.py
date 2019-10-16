@@ -9,7 +9,8 @@ for i in range (1, len(L)):
         j = j-1  
         L[j+1] = val
 c = 0
-for i in range(prob): if mins >= L[i] and mins>=0:
-        c +=1 
-        mins -=L[i]
+for i in range(prob):
+        if mins >= L[i] and mins>=0:
+                c+=1 
+                mins -=L[i]
 print(c)
