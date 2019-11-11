@@ -44,10 +44,11 @@ line2 = input().split()
 for x in range(n):
     medicines.append(line2[x])
 
-
 for y in range(q):
     aux = input()
     toSearch.append(aux)
 
+Sorted = QuickSort(medicines)
+
 for z in range(len(toSearch)):
-    print(BinarySearch(toSearch, 0, len(toSearch)-1, toSearch[z]))
+    print(BinarySearch(Sorted, 0, len(Sorted)-1, toSearch[z].strip()))
