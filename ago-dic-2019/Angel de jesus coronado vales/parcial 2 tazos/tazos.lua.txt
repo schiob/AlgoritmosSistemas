@@ -1,0 +1,93 @@
+function quicksort(arr, primero, ultimo)
+	i = primero
+	j = ultimo
+	centro = arr[(primero + ultimo)//2]
+
+	while (true) do
+
+		while(arr[i] < centro)do
+              i = i+1
+		end	
+		while(arr[j] > centro)do
+              j = j-1
+		end	
+      
+		if(i <= j)then 
+			temp = arr[i]
+			arr[i] = arr[j]
+			arr[j] = temp
+			i = i+1
+			j = j-1	
+		end	
+
+		if(i > j)then
+           break
+		end	
+	end	
+
+	if(primero < j)then
+		quicksort(arr, primero, j)
+	end	
+
+	if(i < ultimo)then
+		quicksort(arr, i, ultimo)
+	end	
+
+end
+
+--_________________________________busqueda binara______________________________________________________
+function binary_search(arr, inicio, fin, x)
+	if inicio > fin then
+		return -1
+	end	
+
+	middle = (inicio + fin)//2
+
+	if arr[middle] == x then
+		return "El numero: '"..arr[middle].."' su posicion es: '"..middle.."'\n"
+	end	
+
+	if x < arr[middle] then
+		return binary_search(arr, inicio, middle-1, x)
+	else
+		return binary_search(arr, middle+1, fin, x)
+	end	
+end
+
+--______________________________________ main _______________________________________________________________
+math.randomseed(os.time())
+
+io.write("Cantidad de tazos: ")
+num = io.read("*n")
+arr = {}
+
+for i=1,num do
+	arr[i]=math.random(1,1000)
+end
+
+print("Serie de los Tazos\n")
+for i=1,num do
+	io.write(arr[i])
+	if i < num  then
+    io.write(", ")
+	end	
+end
+
+print("\n".."\n_________ Ordenado por Quick Sort _____________\n")
+
+quicksort(arr, 1, #arr)--metodo llamado
+
+for k=1,#arr do
+	io.write(arr[k])
+	if k < num  then
+    io.write(", ")
+	end	
+end
+
+print("\n".."\nNumero de Serie de tazo a buscar: ")
+tazo = io.read("*n")
+
+io.write("\n"..#arr.." '"..tazo.."'\n")
+
+print(binary_search(arr, 1, #arr, tazo))--metodo llamado
+

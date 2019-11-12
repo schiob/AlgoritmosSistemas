@@ -1,0 +1,32 @@
+function busqueda_secuencial(arr,buscar)
+	for i=1,#arr do
+	if buscar == arr[i] then
+		io.write("El libro '"..buscar.."' esta en el lugar "..i)
+		break
+	else
+		if i == #arr then
+			print("-1")
+		end
+	end
+end
+print("\n")
+end--final de la funcion
+
+--________________________________main_________________________________
+
+arr = {"historia","artes","matematicas","geografia","poesia","filosofia"}
+
+for i=1,#arr do
+	io.write(arr[i])
+	if i < #arr then
+		io.write(", ")
+	end
+end
+
+io.write("\nLibro a buscar: ")
+buscar = io.read()
+io.write("\n"..#arr.." '"..buscar.."'\n".."\n")
+
+busqueda_secuencial(arr,buscar)
+
+
