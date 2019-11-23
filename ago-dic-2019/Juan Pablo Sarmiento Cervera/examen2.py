@@ -35,9 +35,7 @@ def binarySearch(arr,inicio,fin,x):
 if __name__ == '__main__':
 	arr=[]	#mergeSort(arr)
 	n = input("Dime cuantos libros hay y cual buscas: ").split()
-for i in range(n[0])
+	x=n[1]
 	b = input("Cuales son los libros que hay en la repisa?  ").split()
-	arr.append(b)
-	print(binarySearch(arr,0,len(arr)-1,n[1]))
 	mergeSort(arr)
-	arr=sorted(b)
+	print(binarySearch(arr,0,len(arr)-1,n[1]))
