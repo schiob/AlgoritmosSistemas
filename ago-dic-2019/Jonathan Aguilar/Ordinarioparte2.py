@@ -1,11 +1,3 @@
-def selectionSort(arreglo): ## acomodo de los datos ingresados de menor a mayor 
-    for i in range(len(arreglo)):
-        temp = i 
-        for j in range(i+1, len(arreglo)):
-            if arreglo[temp][0] > arreglo[j][0]:
-                temp = j       
-        arreglo[i], arreglo[temp] = arreglo[temp], arreglo[i]
-
 def binarySearch(arreglo, inicial, final, x):
 
     medio = (inicial + final)//2 ##sDivide el arreglo en partes iguales
@@ -28,8 +20,7 @@ if __name__ == "__main__":
         b = input().split()     ##datos a ingresar
         arreglo.append(b)       ## se agregan los datos en el arreglo
 
-    selectionSort(arreglo)
     print("=========estos son los datos que ingresaste=========")
     print(arreglo)
     print("=========Posicion del articulo que buscas n.n=========")
-    print(binarySearch(arreglo, 0, len(arreglo)-1, x)+1)
+    print(binarySearch(arreglo, 0, len(arreglo), x)+1)
