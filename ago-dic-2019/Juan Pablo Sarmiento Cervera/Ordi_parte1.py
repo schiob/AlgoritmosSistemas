@@ -31,7 +31,7 @@ n=int(input())
 if n>1 and n<30:
     for i in range(n):
         carta.append(input().split())
-        mergeSort(carta,rar)
+    mergeSort(carta,rar)
     for i in carta:
         print()
         print(i[0])
