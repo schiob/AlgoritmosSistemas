@@ -51,4 +51,8 @@ for y in range(q):
 Sorted = QuickSort(medicines)
 
 for z in range(len(toSearch)):
+<<<<<<< HEAD
     print(BinarySearch(Sorted, 0, len(Sorted)-1, toSearch[z].strip()))
+=======
+    print(BinarySearch(Sorted, 0, len(Sorted)-1, toSearch[z].strip()))
+>>>>>>> 5d008b9ac0173cd9ccc1599b08d64ac5cedb8a59

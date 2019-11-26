@@ -67,4 +67,8 @@ d = Deck()
 
 d.order()
 
+<<<<<<< HEAD
 d.fan()
+=======
+d.fan()
+>>>>>>> 5d008b9ac0173cd9ccc1599b08d64ac5cedb8a59
