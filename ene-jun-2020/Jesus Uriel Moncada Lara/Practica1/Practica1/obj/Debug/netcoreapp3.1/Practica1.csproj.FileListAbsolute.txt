@@ -1,0 +1,11 @@
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\bin\Debug\netcoreapp3.1\Practica1.exe
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\bin\Debug\netcoreapp3.1\Practica1.deps.json
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\bin\Debug\netcoreapp3.1\Practica1.runtimeconfig.json
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\bin\Debug\netcoreapp3.1\Practica1.runtimeconfig.dev.json
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\bin\Debug\netcoreapp3.1\Practica1.dll
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\bin\Debug\netcoreapp3.1\Practica1.pdb
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\obj\Debug\netcoreapp3.1\Practica1.csprojAssemblyReference.cache
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\obj\Debug\netcoreapp3.1\Practica1.AssemblyInfoInputs.cache
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\obj\Debug\netcoreapp3.1\Practica1.AssemblyInfo.cs
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\obj\Debug\netcoreapp3.1\Practica1.dll
+C:\Users\uri33\OneDrive\Escritorio\C#\Practica1\Practica1\obj\Debug\netcoreapp3.1\Practica1.pdb
