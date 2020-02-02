@@ -1,0 +1,43 @@
+print("Arreglo Original:")
+arr = {3,43,2,5,4,6,5,4,334,45,23,123,323,45,34,23,43,5,46,78}
+for i=1,#arr do
+	io.write(arr[i]..", ")--imprime el arreglo Original
+end
+
+io.write("\npares:\n")
+
+--se almacena los pares en un nuevo arreglo
+arr2={}
+
+cont=1
+for i=1,#arr do
+	if arr[i]%2 == 0 then
+		arr2[cont] = arr[i]
+		cont = cont + 1--incrementa el contador para el amacenamiento del arreglo de los pares
+	end
+end
+--se imprime el arreglo con loa pares
+for i=1,#arr2 do
+	io.write(arr2[i],", ")
+end
+
+--se ordenan ,os pares de mayor a menor 
+--utilizando insertion sort
+for i=2,#arr2 do
+	aux = arr2[i]
+	for j=i-1, 1, -1 do
+		
+		if aux < arr2[j]then
+			arr2[j+1] = arr2[j]
+			arr2[j] =aux
+		end	
+
+	end--cierre del segundo for j
+end--cierre delrimer for i]
+
+print("\nArreglo Par Ordenado.......")
+for i=1,#arr2 do
+	io.write(arr2[i]..", ")
+end
+
+
