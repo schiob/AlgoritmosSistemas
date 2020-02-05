@@ -1,7 +1,7 @@
 # Practica 2
 Tom, mi primo al que le encantan los numeritos, tiene una lista de 20 enteros. Pero tiene un problema donde después de las 9 p.m. le asustan los números impares.
 
-Ayúdale removiendo esos números e imprime la lista que tiene en orden inverso.
+Ayúdale removiendo esos números e imprime la lista ordenada de mayor a menor.
 
 ## Ejemplo
 
@@ -12,5 +12,5 @@ Ayúdale removiendo esos números e imprime la lista que tiene en orden inverso.
 
 ### Salida
 ```
-78 46 34 334 4 6 4 2
+334 78 46 34 6 4 4 2
 ```
