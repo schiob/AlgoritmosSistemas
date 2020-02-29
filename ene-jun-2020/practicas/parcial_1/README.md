@@ -1,6 +1,6 @@
 # Parcial 1 - Mucho Más ordenamiento
 
-A Filomeno le encantan las películas y está organizando un maratón de ciencia ficción en su escuela. Filomeno quiere que las pelis se proyecten de la más corta a la más larga, ayudalo a ordenar sus películas de esta forma.
+A Filomeno le encantan las películas y está organizando un maratón de ciencia ficción en su escuela. Filomeno quiere que las pelis se proyecten de la más corta a la más larga, en el caso de que duren lo mismo entonces ordenarlas por orden alfabético, ayudalo a ordenar sus películas de esta forma.
 
 ### Input
 
