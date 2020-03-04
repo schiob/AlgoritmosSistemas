@@ -9,13 +9,12 @@ def bubblesort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
 n = int(input())
-
 arr = []
 for i in range(n):
-    peli = input().split()
-    tiempo = peli[1]*60+peli[2]
-    arr.append([peli[0],tiempo])
+    pelis = input().split()
+    tiempo = pelis[1]*60+pelis[2]
+    arr.append([pelis[0],tiempo])
     
- bubblesort(arr)
-
+bubblesort(arr)
 print(" ".join(x[0] for x in arr))
+
