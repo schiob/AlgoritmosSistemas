@@ -1,0 +1,52 @@
+def practica_6(arr):
+menor=[]
+igual=[]
+mayor=[]
+
+      if len(arr) > 1:
+        pivote = arr[0]
+        for i in arr:
+            if i < pivote:
+                less.append(i)
+            if i == pivote:
+                igual.append(i)
+            if i > pivote:
+                mayor.append(i)
+        return (QuickSort(less) + equal + QuickSort(mayor))
+    else:
+        return arr
+
+def BinarySearch (arr, l, r, x): 
+
+    if r >= l: 
+
+        mid = l + (r - l)//2
+
+        if arr[mid] == x: 
+            return mid 
+
+        elif arr[mid] > x: 
+            return BinarySearch(arr, l, mid-1, x) 
+        else: 
+            return BinarySearch(arr, mid + 1, r, x) 
+
+    else: 
+        return -1
+
+line = input().split()
+n = int(line[0])
+q = int(line[1])
+
+medicinas = []
+toSearch = []
+
+line2 = input().split()
+for x in range(n):
+    medicinas.append(line2[x])
+
+for y in range(q):
+    aux = input()
+    toSearch.append(aux)
+
+for z in range(len(toSearch)):
+    print(BinarySearch(toSearch, 0, len(toSearch)-1, toSearch[z])) 
