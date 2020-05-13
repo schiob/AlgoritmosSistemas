@@ -1,4 +1,4 @@
-# Práctica10 - Ejercicio para trabajar el uso de grafos
+# Práctica9 - Ejercicio para trabajar el uso de grafos
 
 Formen equipos y continuen con el trabajo, el objetivo es resolver el siguiente ejercicio:
 
