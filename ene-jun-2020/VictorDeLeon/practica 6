@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class medicina {
+    
+    
+    public static void main(String[] args){
+        
+        Scanner n = new Scanner(System.in);
+        Scanner q = new Scanner(System.in); 
+       int num1 = n.nextInt();
+       int num2 = n.nextInt();
+       
+        String[] medicamento = new String[num1];
+        for (int i = 0; i < num1; i++) {
+            medicamento[i] = q.next();    
+           
+        }
+          
+        for(int j=0;j<num1;j++) {
+             for(int i=0;i<num1 && i != j ;i++) {  
+                 if (medicamento[i].compareTo(medicamento[j])>0) {
+                     String aux;
+                     aux=medicamento[i];
+                     medicamento[i]=medicamento[j];
+                     medicamento[j]=aux;           
+                 }  
+             }
+         }
+        for (String a : medicamento) {
+            System.out.println(a);
+        }
+    }
+  
+}
