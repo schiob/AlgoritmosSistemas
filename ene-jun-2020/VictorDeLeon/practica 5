@@ -1,0 +1,45 @@
+public class Atleta {
+    
+    String nombre;
+    int gold;
+    int silver;
+    int bronze;
+    
+     public Atleta(String nombre, int gold, int silver, int bronze){
+            
+           this.nombre = nombre;
+           this.gold = gold;
+           this.silver = silver;
+           this.bronze = bronze;
+        } 
+     
+     public String getnombre(){
+         return nombre;
+     }
+     
+        public int getgold(){
+         return gold;
+     }
+     
+}
+
+    public static void main(String[] args) {
+        Scanner s= new Scanner (System.in);
+        int n = s.nextInt();
+        Atleta[] people = new Atleta[3];
+       
+       for (int i = 1; i < n; i++) {
+            String name = s.nextLine();
+            int gold = s.nextInt();
+            int silver = s.nextInt();
+            int bronze = s.nextInt();
+            people[i] = new Atleta(name,gold,silver,bronze);
+            
+        }
+        for (int i = 0; i < 10; i++) {
+            System.out.println(people[i].getnombre());
+        }
+       
+    }
+    
+}
