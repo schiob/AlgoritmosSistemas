@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class colores {
+    Scanner s = new Scanner(System.in);
+    Scanner q = new Scanner(System.in);
+    int n = s.nextInt();
+   
+        int[] col = new int[n]; 
+        for (int i = 0; i < n; i++) {
+            col[i] = q.nextInt();    
+           
+            }
+         int salto, aux, num;
+         int[] A = new int[num];
+   boolean cambios;
+   for(salto=A.length/2; salto!=0; salto/=2){
+           cambios=true;
+           while(cambios){ // Mientras se intercambie algún elemento
+                       cambios=false;
+                       for(i=salto; i< A.length; i++) // se da una pasada
+                               if(A[i-salto]>A[i]){ // y si están desordenados
+                                     aux=A[i]; // se reordenan
+                                     A[i]=A[i-salto];
+                                     A[i-salto]=aux;
+                                     cambios=true; // y se marca como cambio.
+                               }
+                        }
+            }
+}
