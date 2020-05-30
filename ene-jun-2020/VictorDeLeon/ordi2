@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class pancho {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+       
+        String[] a = new String[n];
+        String S = s.next();
+        pancho ob = new pancho(); 
+        
+        int b = a.length; 
+        int x = 10; 
+        
+        int[] arr = new int[n];    
+        int result = ob.pancho(arr ,0, b - 1, x); 
+        if (result == -1) 
+            System.out.println(); 
+        else
+            System.out.println( result); 
+        
+    }
+   int pancho(int a[], int l, int r, int x) 
+    { 
+        if (r >= l) { 
+            int mid = l + (r - l) / 2; 
+  
+            if (a[mid] == x) 
+                return mid; 
+  
+           
+            if (a[mid] > x) 
+                return pancho(a, l, mid - 1, x); 
+  
+            
+            return pancho(a, mid + 1, r, x); 
+        } 
+  
+        
+        return -1; 
+    } 
+  
+    
+}
