@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class boletodorado {
+	
+  public static void main(String [] Args){  
+      Scanner s = new Scanner(System.in);
+      int n  = s.nextInt();
+      int[] caj = new int[n];
+        for (int w = 0; w < 30 && w > 1 ; w++) {
+         //int[] caj = new int[w];
+            for (int i = 0; i < caj.length ; i++) {
+              quick_srt(caj,0,caj.length-1);  
+            }
+            int j;
+             for(j = 0; j < caj.length ; j++)
+          System.out.print(caj[j]+"  ");
+      int suma = 0;
+  for(int i=0; i< caj.length;i++)
+            
+            suma = caj[i];
+            System.out.println(suma);
+    }
+      }
+  public static void quick_srt(int caj[],int low, int n){
+      int lo = low;
+      int hi = n;
+      if (lo >= n) {
+          return;
+      }
+      int mid = caj[(lo + hi) / 2];
+      while (lo < hi) {
+          while (lo<hi && caj[lo] < mid) {
+              lo++;
+          }
+          while (lo<hi && caj[hi] > mid) {
+              hi--;
+          }
+          if (lo < hi) {
+              int T = caj[lo];
+              caj[lo] = caj[hi];
+              caj[hi] = T;
+          }
+      }
+      if (hi < lo) {
+          int T = hi;
+          hi = lo;
+          lo = T;
+      }
+      quick_srt(caj, low, lo);
+      quick_srt(caj, lo == low ? lo+1 : lo, n);
+   }
+}    
