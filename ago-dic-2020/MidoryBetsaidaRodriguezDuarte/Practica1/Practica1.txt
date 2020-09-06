@@ -1,0 +1,40 @@
+package algoritmosordenamientos;
+
+
+public class AlgoritmosOrdenamientos {
+String texto, resultado;
+int num1, num2;
+public AlgoritmosOrdenamientos(){
+    texto=resultado="";
+    num1=num2=0;
+}
+    public void LeerTextoYAsignar(String textoIngreso){
+        texto=textoIngreso;
+        String[]arr=texto.split(",");
+        num1=Integer.parseInt(arr[0]);
+        num2=Integer.parseInt(arr[1]);
+    }
+    public String CalcularSuma(){
+        int resul=num1+num2;
+        resultado=Integer.toString(resul);
+        return resultado;
+    }
+}
+
+
+
+
+package algoritmosordenamientos;
+
+import java.util.Scanner;
+public class Main_2_numeros {
+    public static void main(String[]args){
+        AlgoritmosOrdenamientos progra = new AlgoritmosOrdenamientos();
+        Scanner lector=new Scanner(System.in);
+        System.out.print("Introduzca los 2 numeros separados por una coma\nentre -100 y 100: ");
+        String texto=lector.nextLine();
+        progra.LeerTextoYAsignar(texto);
+       System.out.print("El resultado es:"+progra.CalcularSuma());
+    }
+            
+}
