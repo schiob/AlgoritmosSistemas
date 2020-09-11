@@ -1,0 +1,93 @@
+public class Magia{
+    String texto;
+    int n,m,suma,noProb;
+    Sorts orden = new Sorts();
+    
+    public Magia(){
+        texto="";
+        n=0;
+        m=0;
+        suma=0;
+        noProb=0;
+    }
+    
+    public void leerTextoYAsignar(String textoIngreso){
+        texto=textoIngreso;
+        String[] arr=texto.split(" ");
+        n=Integer.parseInt(arr[0]);
+        m=Integer.parseInt(arr[1]);
+    }
+    
+    public int longitud(){
+        return n;
+    }
+    
+    public int[] textoAArreglo(String textoIngreso){
+        int[] arreglo = new int[n];
+        texto=textoIngreso;
+        String[] arr=texto.split(" ");
+        for(int i=0;i<n;i++){
+            arreglo[i]=Integer.parseInt(arr[i]);
+        }
+        arreglo=orden.insertionSort(arreglo);
+        return arreglo;
+    }
+    
+    public void calcular(int[] arr){
+        for(int i=0;i<arr.length;i++){
+            suma=suma+arr[i];
+            if(suma<=m){
+                noProb++;
+            }else{
+                break;
+            }
+        }
+        System.out.println(noProb);
+    }
+}
+
+public class Sorts{
+    public Sorts(){
+    }
+    
+    public int[] insertionSort(int[] arr){
+        int i,j,key,temp;
+        for(i=1;i<arr.length;i++){
+            key=arr[i];
+            j=i-1;
+            while(j>=0 && key<arr[j]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+                j--;
+            }
+        }
+        return arr;
+    }
+}
+
+
+import java.util.Scanner;
+
+public class DavCalculoMain{
+    public static void main(String args[]){
+        Scanner lector = new Scanner(System.in);
+        Magia trabajador = new Magia();
+        String texto;
+        int resultado;
+        
+        System.out.println("# de problemas y tiempo, \nseperados por un espacio:");
+        texto=lector.nextLine();
+        trabajador.leerTextoYAsignar(texto);
+        int[] in=new int[trabajador.longitud()];
+        
+        System.out.println("Introduzca los minutos\nque toman realizar los\nproblemas, separados\n por espacios:");
+        texto=lector.nextLine();
+        in=trabajador.textoAArreglo(texto);
+        for(int i=0;i<in.length;i++){
+            System.out.print(in[i]+" ");
+        }
+        System.out.println("");
+        trabajador.calcular(in);
+    }
+}
