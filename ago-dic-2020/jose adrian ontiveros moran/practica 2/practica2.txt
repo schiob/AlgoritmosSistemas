@@ -1,0 +1,24 @@
+def insertion_sort(problema):
+
+    for i in range(1, len(problema)):
+        temp = problema[i]
+        j = i - 1
+        while (j >= 0 and temp < problema[j]):
+            problema[j + 1] = problema[j]
+            j = j - 1
+        problema[j + 1] = temp
+problema = input('insertar los problemas ').split()
+problema = [int(x) for x in problema]
+insertion_sort(problema)
+tiempo=0;
+contador=0;
+print('prblemas en orden ', end='')
+print(problema)
+
+for x in range(0, len(problema)):
+    tiempo ++ int(problema[x])
+    if(tiempo <= int(x)):
+        contador ++ 1;
+    else:
+        print(contador)
+        break
