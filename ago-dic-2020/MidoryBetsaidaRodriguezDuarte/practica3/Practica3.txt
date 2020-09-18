@@ -1,0 +1,113 @@
+public class Sorts{
+    public Sorts(){
+    }
+    
+    public int[] insertionSort(int[] arr){
+        int i,j,key,temp;
+        for(i=1;i<arr.length;i++){
+            key=arr[i];
+            j=i-1;
+            while(j>=0 && key<arr[j]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+                j--;
+            }
+        }
+        return arr;
+    }
+    
+    public int[] invertedInsertionSort(int[] arr){
+        int i,j,key,temp;
+        for(i=1;i<arr.length;i++){
+            key=arr[i];
+            j=i-1;
+            while(j>=0 && key>arr[j]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+                j--;
+            }
+        }
+        return arr;
+    }
+}
+
+
+
+
+package algoritmosordenamientos;
+
+
+public class Magia2 {
+    String texto;
+    int n,suma,noProb;
+    Sorts orden = new Sorts();
+    
+    public Magia2(){
+        texto="";
+        n=0;
+        suma=0;
+        noProb=0;
+    }
+    
+    public void setN(int num){
+        n = num;
+    }
+    public int longitud(){
+        return n;
+    }
+    
+    public int[] textoAArreglo(String textoIngreso){
+        int[] arreglo = new int[n];
+        texto=textoIngreso;
+        String[] arr=texto.split(" ");
+        for(int i=0;i<n;i++){
+            arreglo[i]=Integer.parseInt(arr[i]);
+        }
+        arreglo=orden.insertionSort(arreglo);
+        return arreglo;
+    }
+    public int[] textoAArregloInv(String textoIngreso){
+        int[] arreglo = new int[n];
+        texto=textoIngreso;
+        String[] arr=texto.split(" ");
+        for(int i=0;i<n;i++){
+            arreglo[i]=Integer.parseInt(arr[i]);
+        }
+        arreglo=orden.invertedInsertionSort(arreglo);
+        return arreglo;
+    }
+
+}
+
+
+package algoritmosordenamientos;
+
+import java.util.Scanner;
+public class PokemonSortMain {
+   
+    public static void main(String args[]){
+        Scanner lector1 = new Scanner(System.in);
+        Scanner lector2 = new Scanner(System.in);
+        Magia2 hadaMadrina = new Magia2();
+        String texto="";
+        int n;
+        
+        System.out.println("¿Cuántos pokemon atrapó Carlitos?");
+        n = lector1.nextInt();
+        lector1.nextLine();
+        int[] noPoke = new int[n];
+        hadaMadrina.setN(n);
+        
+        System.out.println("Escriba el Cp de cada pokemon");
+        texto = lector1.nextLine();
+        lector1.close();
+        
+        System.out.println("");
+        noPoke = hadaMadrina.textoAArregloInv(texto);
+        for(int i=0;i<noPoke.length;i++){
+            System.out.print(noPoke[i]+" ");
+        }
+    }
+}
