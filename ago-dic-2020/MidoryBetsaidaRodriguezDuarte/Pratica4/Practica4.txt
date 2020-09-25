@@ -1,0 +1,30 @@
+public class es_Palin{
+    boolean es_Palin(String pal){
+        if(pal.length()<=1){
+            return true;
+        }else{
+            if(pal.charAt(0)==pal.charAt(pal.length()-1)){
+                return es_Palin(pal.substring(1,pal.length()-1));
+            }else{
+                return false;
+            }
+        }
+    }
+}
+
+import java.util.Scanner;
+public class MainPalindrom{
+    public static void main(String args[]){
+        Scanner lec = new Scanner(System.in);
+        es_Palin check = new es_Palin();
+        
+        System.out.print("¿Cuál palabra desea analizar?\n");
+        String palabra = lec.nextLine();
+        if(check.es_Palin(palabra)){
+            System.out.print("Si es\n");
+        }else{
+            System.out.print("No es\n");
+        }
+        lec.close();
+    }
+}
