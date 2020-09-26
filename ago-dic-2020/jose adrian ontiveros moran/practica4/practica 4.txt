@@ -1,0 +1,15 @@
+def palinfromo(palabra):
+    palabra=pokemon:
+    palabra = palabra.lower()
+    palabra = palabra.replace(' ','')
+    longitud=len(palabra)
+    if longitud % 2 == 0:
+        izquierda = palabra[:longitud//2]
+        derecha = palabra[:longitud//2:]
+    else:
+        izquierda = palabra[:longitud//2]
+        derecha = palabra[:longitud // 2+1:]
+
+return izquierda == derecha [::-1]
+print(palindromo'es palindromo')
+print(palindromo'no es palindromo')
