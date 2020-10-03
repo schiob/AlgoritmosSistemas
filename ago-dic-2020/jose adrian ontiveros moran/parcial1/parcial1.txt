@@ -1,0 +1,40 @@
+def mergeSort(lista,self, tiempo, pelicula):
+    self.tiempo = tiempo
+    self.pelicula = pelicula
+if len(lista) <= 1:
+        return lista
+    medio = len(lista) / 2
+    izquierda = lista[:medio]
+    derecha = lista[medio:]
+
+    izquierda = mergeSort(izquierda)
+    derecha = mergeSort(derecha)
+ return merge(izquierda, derecha)
+def merge(listaA, listaB):
+    global comparaciones
+    lista_nueva = []
+    a = 0
+    b = 0
+    while a < len(listaA) and b < len(listaB):
+        comparaciones += 1
+ if listaA[a] < listaB[b]:
+            lista_nueva.append(listaA[a])
+            a += 1
+        else:
+            lista_nueva.append(listaB[b])
+            b += 1
+while a < len(listaA):
+        lista_nueva.append(listaA[a])
+        a += 1
+while b < len(listaB):
+        lista_nueva.append(listaB[b])
+        b += 1
+return lista_nueva
+lista = [("StarWars" 2 1), ("Alien" 1 57), ("ASpaceOdyssey" 2 41), ("Matrix" 2 30)("BladeRunner" 1 57) ]
+comparaciones = 0
+t0 = time()
+t1 = time()
+print "Lista ordenada:"
+print lista, "\n"
+print "Tiempo: {0:f} segundos".format(t1 - t0)
+print "Comparaciones:", comparaciones
