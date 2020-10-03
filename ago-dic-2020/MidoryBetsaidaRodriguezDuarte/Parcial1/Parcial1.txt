@@ -1,0 +1,75 @@
+public class Magia2{
+    public int nit;
+    public Magia2(){
+    }
+    public void AsignN(int n){
+        nit=n;
+    }
+    public String[][] invertedInsertionSortTriple(String[][] s){
+        int i,j,key2,key3,temp2,temp3;
+        String temp1;
+        String key1;
+        String[] arr1 = new String[nit];
+        int[] arr2 = new int[nit];
+        int[] arr3 = new int[nit];
+        for(i=1;i<arr1.length;i++){
+            arr1[i]=s[i][0];
+            arr2[i]=Integer.parseInt(s[i][1]);
+            arr3[i]=Integer.parseInt(s[i][2]);
+            
+            key1=arr1[i];
+            key2=arr2[i];
+            key3=arr3[i];
+            j=i-1;
+            while(j>=0 && (key2>arr2[j]&&key3>arr3[j])){
+                temp1=arr1[j];
+                temp2=arr2[j];
+                temp3=arr3[j];
+                
+                arr1[j]=arr1[j+1];
+                arr2[j]=arr2[j+1];
+                arr3[j]=arr3[j+1];
+                
+                arr1[j+1]=temp1;
+                arr2[j+1]=temp2;
+                arr3[j+1]=temp3;
+                j--;
+            }
+        }
+        
+        for(i=0;i<nit;i++){
+            s[i][0]=arr1[i];
+        }
+        for(i=0;i<nit;i++){
+            s[i][1]=String.valueOf(arr2[i]);
+        }
+        for(i=0;i<nit;i++){
+            s[i][2]=String.valueOf(arr3[i]);
+        }
+        return s;
+    }
+}
+
+
+import java.util.Scanner;
+public class MainSortPeliculas{
+    public static void main(String args[]){
+        Scanner lec = new Scanner(System.in);
+        Magia2 mag = new Magia2();
+        int n = Integer.parseInt(lec.nextLine());
+        String[][] arrStr = new String[n][3];
+        for(int i=0;i<n;i++){
+            arrStr[i][0] = lec.nextLine();
+            arrStr[i][1] = lec.nextLine();
+            arrStr[i][2] = lec.nextLine();
+        }
+        mag.AsignN(n);
+        mag.invertedInsertionSortTriple(arrStr);
+        
+        for(int i=0;i<n;i++){
+            System.out.print(arrStr[i][0]+" ");
+        }
+        
+    }
+    
+}
