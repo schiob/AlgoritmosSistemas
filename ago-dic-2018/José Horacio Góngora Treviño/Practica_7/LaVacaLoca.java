@@ -1,4 +1,4 @@
-﻿import java.util.*;
+import java.util.*;
 public class LaVacaLoca {
     public static void main(String[]args){
         long inicio = System.currentTimeMillis();

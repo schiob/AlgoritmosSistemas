@@ -1,4 +1,4 @@
-﻿# Práctica 2 - Insertion Sort
+# Práctica 2 - Insertion Sort
 
 En su último viaje a Ciudad de México Carlitos capturó un montón de Pokemons en Pokemon go. 
 Y quiere ver todos esos pokemons del más poderoso al más debil. 
