@@ -1,0 +1,21 @@
+def quickS(array):
+    if len(array) == 0:
+        return []
+
+    izq = []
+    der = []
+    pivote = array[0]
+
+    for x in array[1:]:
+        if x < pivote:
+            izq.append(x)
+        else:
+            der.append(x)
+
+    return quickS(izq) + [pivote] + quickS(der)
+
+
+n = int(input())
+line = input().split()
+
+print(quickS(line))
