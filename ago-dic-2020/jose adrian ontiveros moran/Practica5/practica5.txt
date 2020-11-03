@@ -1,0 +1,27 @@
+arr=[] 
+n=input()
+for n in input().split(" "):
+  r=(n)
+  arr.append(r)
+#quick sort
+def quickSort(arr,start,end):
+    pivot = start
+    point = end
+    while pivot != point:
+        if arr[point] < arr[pivot] and point > pivot:
+            arr[point], arr[pivot] = arr[pivot], arr[point]
+            pivot, point = point, pivot
+        elif arr[point] > arr[pivot] and point < pivot:
+            arr[point], arr[pivot] = arr[pivot], arr[point]
+            pivot, point = point, pivot
+        if pivot > point:
+            point += 1
+        else:
+            point -= 1
+    if pivot != start:
+        quickSort(arr, start, pivot-1)
+    if pivot != end:
+        quickSort(arr, pivot+1, end)
+quickSort(arr,0,len(arr)-1)
+for i in range(len(arr)):
+         print(arr[i], end= ' ')
