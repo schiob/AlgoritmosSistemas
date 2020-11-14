@@ -1,0 +1,85 @@
+import javax.swing.JOptionPane;
+
+public class Ets2 {
+
+    public void Quick(int []arreglo, int primero, int ultimo){
+        int i,j,pivote,auxiliar;
+        i=primero;
+        j=ultimo;
+        pivote=arreglo[(primero+ultimo)/2];
+        do {
+            while(arreglo[i]<pivote){
+                i++;
+            }   
+            while(arreglo[j]>pivote){
+            j--;
+        }
+            //Aqui se mueven
+            if (i<=j) {
+                auxiliar=arreglo[i];
+                arreglo[i]=arreglo[j];
+                arreglo[j]=auxiliar;
+                i++;
+                j--;
+            }
+        } while (i<=j);
+        if (primero<j) {
+            Quick(arreglo,primero,j);
+        }
+        if (i<ultimo) {
+            Quick(arreglo,i,ultimo);
+        }
+    }
+    
+    
+    //Metodo de busqueda binaria
+    public int binaria(int x, int[]arreglo){
+ int inicio=0;
+ int fin=arreglo.length-1;
+ int medio;
+ while(inicio<=fin){
+     medio=(inicio+fin)/2;
+     if (arreglo[medio]<x) {
+         inicio=medio+1;
+     }
+     else if(arreglo[medio]>x){
+         fin=medio-1;
+     }
+     else return medio;
+     
+     
+ }
+    return -1;
+}
+    
+    public static void main(String[] args) {
+        int tazos[]={6,42,32,231,23,42,90,45};
+        int x;
+        int pos;
+        Ets2 busc=new Ets2();
+        int opc=-1;
+        
+        busc.Quick(tazos, 0, tazos.length-1);
+        
+        do {
+            opc=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese la opcion correspondiente: \n"
+                    + "1.- Buscar un tazo. \n"
+                    + "0.- Salir.","Menú Principal",JOptionPane.INFORMATION_MESSAGE));
+            switch (opc) {
+                case 1:
+                    x=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el numero de serie del tazo a buscar: "));
+                    pos=busc.binaria(x, tazos);
+                    if (pos!=-1) {
+                        JOptionPane.showMessageDialog(null, "El tazo con numero de serie " +x +" se encuentra en la posición " +pos);
+                    }
+                    else
+                    {
+                      JOptionPane.showMessageDialog(null, "El tazo no se encuentra.");
+                    }
+                break;
+            }
+        } while (opc!=0);
+      
+    }
+    
+}
