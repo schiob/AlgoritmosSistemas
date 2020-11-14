@@ -1,0 +1,62 @@
+Problema 1
+def busquedaLineal(elemento,array):
+    found = False
+    posicion = 0
+    while posicion < len(array) and not found:
+        if array[posicion] == elemento:
+            found = True
+        posicion = posicion + 1
+    return posicion
+
+n,x = input().split()
+arreglo = input().split()
+
+if len(arreglo) == int(n):
+    resultado = busquedaLineal(x, arreglo)
+    print(resultado)
+else:
+    print('Error')
+
+
+problema 2
+def quickSort(array):
+    if len(array) == 0:
+        return []
+
+    izq = []
+    der = []
+    pivote = array[0]
+
+    for x in array[1:]:
+        if x < pivote:
+            izq.append(x)
+        else:
+            der.append(x)
+
+    return quickSort(izq) + [pivote] + quickSort(der)
+
+
+def binarySer(arr, inicio, fin, buscando):
+    middle = (inicio + fin) // 2
+    if arr[middle] == buscando:
+        return middle
+
+    if inicio == fin:
+        return -1
+
+    if arr[middle] < buscando:
+        return binarySer(arr, (middle + 1), fin, buscando)
+    else:
+        return binarySer(arr, inicio, (middle - 1), buscando)
+
+
+n, x = input().split()
+arreglo = input().split()
+
+
+if int(n) == len(arreglo):
+    arrordenado = quickSort(arreglo)
+    resultado = binarySer(arreglo, 0, len(arreglo) - 1, x)
+    print(resultado)
+else:
+    print('Error')
