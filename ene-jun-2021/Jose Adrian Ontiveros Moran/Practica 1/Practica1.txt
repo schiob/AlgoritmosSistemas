@@ -1,0 +1,5 @@
+numeros = input("dame los 2 numeros:").split()
+a=numeros[0]
+b=numeros[1]
+suma = int(a) + int(b) 
+print(suma)
