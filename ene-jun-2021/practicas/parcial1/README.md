@@ -18,7 +18,7 @@ Imprime a salida estandar **STDOUT** la lista con el nombre de las películas or
 
 #### Entrada
 ```
-6
+5
 StarWars 2 1
 Alien 1 57
 ASpaceOdyssey 2 41
