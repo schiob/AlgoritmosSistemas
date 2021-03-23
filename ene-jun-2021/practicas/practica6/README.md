@@ -18,7 +18,7 @@ Imprime a salida estandar **STDOUT** una linea con las medicinas ordenas en orde
 
 #### Entrada
 ```
-5 3
+5
 naproxeno paracetamol rimantadina azitromicina ibuprofeno
 ```
 #### Salida
