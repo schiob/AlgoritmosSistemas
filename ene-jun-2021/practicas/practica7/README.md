@@ -16,6 +16,7 @@ Si traen alguna dinámica mucho mejor.
   - 2 Heap Sort
     - ASCACIO SANCHEZ JORGE LUIS
     - MORENO MORALES YAHAIRA ELIZABETH
+    - PINTOR CORREA ITZEL CECILIA
 ### Lunes 19:
   - 3 Counting Sort
     - RODRIGUEZ RODRIGUEZ FERNANDA
@@ -32,7 +33,6 @@ Si traen alguna dinámica mucho mejor.
 
 ## Lista de personas que necesitan reportarse para que se les asigne un equipo (no sé si siguen viniendo a la clase):
  - AYALA ORNELAS IVAN
- - PINTOR CORREA ITZEL CECILIA
  - RIVAS RODRIGUEZ JOSE JAVIER
  - RUIZ GARCIA SAUL HASSAN
  - SILVA TORRES LIZBETH YUVISELA
