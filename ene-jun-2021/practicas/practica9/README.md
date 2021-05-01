@@ -1,14 +1,14 @@
 ## Ejercicio Práctica 9 - Búsqueda secuencial sencillita
 
-Susana es fanática de las estampillas, tiene cientos de miles de ellas. Afortunadamente tiene todo ordenado en libros, y estos libros en las repisas de un mueble. El mueble de Susana tiene $3$ repisas, a cada repisa le caben $5$ libros, cada libro tiene $10$ páginas, y cada página tiene $5$ estampillas.
+Susana es fanática de las estampillas, tiene cientos de miles de ellas. Afortunadamente tiene todo ordenado en libros, y estos libros en las repisas de un mueble. El mueble de Susana tiene `3` repisas, a cada repisa le caben `5` libros, cada libro tiene `10` páginas, y cada página tiene `5` estampillas.
 
-Susana te va a dar una lista con todas sus estampillas ordenadas por repisa, libro y página. Y te pide que cuando te pida un identificador de una estampilla le digas en qué $repisa$, $libro$, $página$ y $posición$ está esa estampilla.
+Susana te va a dar una lista con todas sus estampillas ordenadas por repisa, libro y página. Y te pide que cuando te pida un identificador de una estampilla le digas en qué `repisa`, `libro`, `página` y `posición` está esa estampilla.
 
 ### Input
 
-La entrada será recibida por $STDIN$
+La entrada será recibida por `STDIN`
 
-Consiste en 3 grupos, uno por repisa, separados por una linea en blanco. Cada grupo se conforma de $5$ lineas, una por libro. Estas 5 lineas tienen $10$ grupos separados por un espacio, y cada uno de estos grupos tienen $5$ números separados por comas.
+Consiste en 3 grupos, uno por repisa, separados por una linea en blanco. Cada grupo se conforma de `5` lineas, una por libro. Estas 5 lineas tienen `10` grupos separados por un espacio, y cada uno de estos grupos tienen `5` números separados por comas.
 
 Cada identificador de las estampillas es un número entre 1 y 750.
 
@@ -21,11 +21,11 @@ En este ejemplo 569,734,458,405 y 450 son las estampillas que están en la prime
 Varias lineas de este estilo conforman los libros de una repisa.
 Si hay una linea en blanco esto representa el final de una repisa.
 
-En la última linea, después de una linea en blanco, hay un entero $n$ el identificador de la estampilla que está buscando Susana.
+En la última linea, después de una linea en blanco, hay un entero `n` el identificador de la estampilla que está buscando Susana.
 
 ### Output
 
-Imprime a salida estandar $STDOUT$ la posición de la estampilla dando el índice de la $repisa$, $libro$, $página$ y $posición$ o un $-1$ si no está en la colección. Estos índices deben comenzar con 1.
+Imprime a salida estandar `STDOUT` la posición de la estampilla dando el índice de la `repisa`, `libro`, `página` y `posición` o un `-1` si no está en la colección. Estos índices deben comenzar con 1.
 
 ### Ejemplos
 
