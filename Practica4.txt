@@ -1,0 +1,42 @@
+package practica4;
+
+import java.util.Scanner;
+
+public class Practica4 {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int obj, j, i, c=0, v;
+        String v2;
+        System.out.println("Numero de objetos: ");
+        obj = entrada.nextInt();
+        String mat[] = new String[obj];
+        int num[] = new int[obj];
+        for (i = 0; i < mat.length && i < num.length; i++){
+
+            System.out.println("Nombre de objeto: " + c);
+            mat[i] = entrada.next();
+            System.out.println("Cantidad de objetos almacenados: ");
+            num[i] = entrada.nextInt();
+            if (num[i] < 1 || num[i] > 100) {
+            }
+            c++;
+        }
+        for (i = 1; i < num.length; i++)
+        {  v= num[i];
+            v2= mat[i];
+            for ( j = i-1; j > -1 && num[j] < v  ; j--) 
+            {  num[j+1] = num[j];
+                mat[j+1] = mat[j];
+              }
+            num[j+1] = v;
+            mat[j+1] = v2;
+           }
+             System.out.println();
+             for (i = 0; i < mat.length; i++) {
+             System.out.print(mat[i] + " ");          
+        }
+
+    }
+    
+}

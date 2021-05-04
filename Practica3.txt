@@ -1,0 +1,30 @@
+package practica;
+
+import java.util.Scanner;
+
+public class Practica {
+   public static void ord(String nom[]){
+       int i,j;
+       String a;
+     for(i=0;i<nom.length-1;i++){
+        for(j=i+1;j<nom.length;j++){
+            if (nom[i].length() > nom[j].length()){
+                a=nom[i];
+                nom[i]=nom[j];
+                nom[j]=a;
+           }
+       }
+    }
+ }
+    public static void main(String[] args) {
+       Scanner e= new Scanner (System.in);
+       
+       System.out.print("Nombres a ordenar:");
+       String[] nom = e.nextLine().split(" "); 
+       ord(nom);
+       for (String nom1 : nom) {
+           System.out.print(nom1 + " ");
+       }
+    }
+    
+}
