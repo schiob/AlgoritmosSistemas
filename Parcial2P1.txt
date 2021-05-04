@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Parcial2 {
+
+    public static void main(String[] args) {
+      Scanner n =  new Scanner(System.in);
+      String[] busqueda, info, librero;
+      String s= "";
+      int num, j=0;
+
+      System.out.println("Ingrese el cuantos libros hay y el nombre del libro que busca: ");
+      s = n.nextLine();
+
+      info = s.split(" ", 0);
+      num = Integer.valueOf(info[0]);
+
+      System.out.println("Ingresa el nombre de los libros: ");
+      librero = n.nextLine().split(" ", 0);
+      busqueda = librero;
+
+      for(int i = 0; i<librero.length; i++){
+         if(busqueda[i].equalsIgnoreCase(info[1]))
+         {System.out.println(i+1);
+         j++;}
+      }
+      if(j == 0)
+         System.out.println("-1");
+
+   
+    }
+    
+}
