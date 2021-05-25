@@ -1,0 +1,68 @@
+package prueba;
+import java.util.Scanner;
+public class Prueba {
+    public static void quicksort(String arr[], int izq,int der) {
+        int i = izq, j = der;
+        String p = arr[i], aux=" ";
+         while(i < j){                          
+          while(arr[i].compareTo(p) <= 0 && i < j) i++; 
+	   while(arr[j].compareTo(p) > 0) j--;           
+             if (i < j) {                                             
+	       aux = arr[i];                      
+	       arr[i]=arr[j];
+	       arr[j]=aux;
+	     }
+        }
+        arr[izq]=arr[j];     
+        arr[j]=p;
+          if(izq < j-1){
+            quicksort(arr,izq,j-1);}
+            if(j+1 < der){
+            quicksort(arr,j+1,der);}
+    }
+    static int binary(String[] a, String x){
+	 int l = 0, r = a.length - 1;
+	  while (l <= r) {
+	   int m = l + (r - l) / 2;
+	   int re = x.compareTo(a[m]);
+	     if (re == 0)
+	      return m;
+	     if (re > 0)
+	      l = m + 1;
+	     else
+	      r = m - 1;
+	        }
+	        return -1;
+	    }
+    public static void main(String[] args) {
+        Scanner n = new Scanner(System.in);
+        int tam,cant;
+        String arr[];
+	 System.out.print("Ingrese el numero de videojuegos: ");
+	   tam = n.nextInt();
+	 System.out.print("Ingrese el numero de videojuegos a buscar: ");
+	  cant = n.nextInt();
+           arr= new String[tam];
+            for(int i = 0; i<tam; i++) {
+                System.out.print("\nIngrese nombre de videojuego: ");
+                arr[i] = n.next();
+		}
+            quicksort(arr,0,tam - 1);
+            String arrOrd[] =  arr;
+            for(int j = 0; j < tam; j++) {
+	      System.out.print("["+arrOrd[j]+"]");
+            }
+            for(int x = 0; x < cant; x++) {
+                System.out.print("\nIngrese Nombre del videojuego a buscar: ");
+		String games = n.next();
+		String vn = games;
+		 int resultado = binary(arrOrd, vn);
+		    if (resultado == -1)
+		     System.out.println("El videjuego no esta en la lista");
+		      else
+		     System.out.println("EL videojuego esta en la posicion: " + resultado);
+		}
+
+    }
+    
+}

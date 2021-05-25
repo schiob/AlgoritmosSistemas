@@ -1,0 +1,49 @@
+public class Practica6 {
+    public static void QuickSort(String arr[],int inf,int sup){
+        String mitad,x;
+        int izq,der;
+        izq= inf;
+        der = sup;
+        mitad = arr[(izq+der)/2];
+        do{
+            while(arr[izq].compareTo(mitad)<0 && izq<sup){
+                izq++;
+            }
+            while(mitad.compareTo(arr[der])<0 && der>inf){
+                der--;
+            }
+            if (izq <= der) {
+                x = arr[izq];
+                arr[izq] = arr[der];
+                arr[der] = x;
+                izq++;
+                der--;
+            }
+        } while(izq<=der);
+         if (inf < der) {
+            QuickSort(arr,inf,der);
+         }
+         if (izq < sup) {
+            QuickSort(arr,izq,sup);
+         }
+    }
+	public static void main (String []args){
+        Scanner e= new Scanner(System.in);
+        String m[];
+        int n, izq, der;
+         System.out.println("Numero de medicamentos: ");
+          n = e.nextInt();
+         System.out.println("Nombre de los medicamentos: ");
+          m = new String[n];
+          for (int i = 0; i < n; i++) {
+            m[i] = e.next();
+          }
+           izq = 0;
+           der = m.length-1;
+           QuickSort(m,0,n-1);
+            System.out.println("Nombres ordenados: ");
+             for (int i = 0; i < n; i++) {
+             System.out.print(m[i]+" ");
+             }
+  }  
+}
