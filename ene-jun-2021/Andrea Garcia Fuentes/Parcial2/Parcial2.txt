@@ -1,0 +1,45 @@
+import javax.swing.JOptionPane;
+
+public class Ets {
+    public int BusquedaSecuencial(String a[], String libro){
+        int i;
+        libro.trim();
+        boolean encontrado=false;
+        for(i=0; i<a.length && encontrado == false; i++){
+            if (libro.equalsIgnoreCase(a[i])) {
+               encontrado=true;
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int opc=-1;
+        String libros[]={"5 CalculoForDummies","Calculo2Deitel","CalculoForDummies","AlgebraLineal","TeoríaDeNúmeros","TheMangaGuideToCalculus"};
+        int n;
+        String LibBus;
+        Ets buscar=new Ets();
+        n=libros.length;
+
+        do {
+            opc=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese la opcion correspondiente: \n"
+                    + "1.- Buscar libro: \n"
+                    + "0.- Salir.","Menú Principal",JOptionPane.INFORMATION_MESSAGE));
+            switch (opc) {
+                case 1:
+                   LibBus=JOptionPane.showInputDialog(null,"Ingrese el nombre del libro a buscar: ");
+                   int x=buscar.BusquedaSecuencial(libros, LibBus);
+                    if (x!=-1) {
+                        JOptionPane.showMessageDialog(null, "El libro " +LibBus +" se encuentra en la posicion " +x);
+                    }
+                    else
+                    {
+                        JOptionPane.showMessageDialog(null, "El libro que busca no esta en el estante.");
+                    }
+                break;
+            }
+        } while (opc!=0);
+
+    }
+
+}

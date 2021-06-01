@@ -1,0 +1,21 @@
+def quickSort(arreglo):
+    if len(arreglo) == 0:
+        return []
+
+    left = []
+    right = []
+    pivot = arreglo[0]
+
+    for elemento in arreglo[1:]:
+        if len(elemento) < len(pivot):
+            left.append(elemento)
+        else:
+            right.append(elemento)
+
+    return quickSort(left) + [pivot] + quickSort(right)
+
+
+line = input().split()
+
+
+print(quickSort(line))
