@@ -1,0 +1,57 @@
+package Ordenamiento;
+import javax.swing.JOptionPane;
+public class esam {
+    public int BusquedaSecuencial(String a[], String art){
+        int i;
+        art.trim();
+        boolean encontrado=false;
+        for(i=0; i<a.length && encontrado == false; i++){
+            if (art.equalsIgnoreCase(a[i])) {
+               encontrado=true;
+                return i;
+         }
+        }
+        return -1;
+    }    public static void main(String[] args) {
+        esam bus=new esam();
+        int opc;
+        int sel=-1;
+        int n;
+        int pco;
+        String obj="";
+        n=Integer.parseInt(JOptionPane.showInputDialog(null," Ingrese el numero de objetos: "));
+        String art[]=new String[n];
+            for (int i = 0; i < n; i++) {
+                obj=JOptionPane.showInputDialog(null, "Ingrese el nombre del articulo: ");
+                obj.trim();
+                art[i]=obj;
+            }
+        int pre[]=new int[n];
+            for (int i = 0; i <n; i++) {
+             pco=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el precio de " +art[i] +":"));
+             pre[i]=pco;
+            }
+            do{
+                sel=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la opcion correspondiente: \n\n "
+                        + "1.- Buscar un articulo \n "
+                        + "0.- Salir.","Menu de opciones",JOptionPane.INFORMATION_MESSAGE));
+                switch (sel) {
+                    case 1:
+                        obj=JOptionPane.showInputDialog(null, "Ingrese el articulo a buscar:");
+            opc=bus.BusquedaSecuencial(art, obj);
+            
+            if (opc!=-1) {
+                JOptionPane.showMessageDialog(null, "El articulo " +art[opc] +" con precio " +pre[opc] +" se encontro!!.");
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "El articulo no se encuentra.");
+            }
+                        
+                        break;
+                }
+            }while(sel!=0);
+            
+    }
+    
+}

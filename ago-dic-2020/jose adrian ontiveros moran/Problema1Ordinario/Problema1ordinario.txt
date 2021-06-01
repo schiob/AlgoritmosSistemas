@@ -1,0 +1,25 @@
+public class ordenar {
+public static String[] shell(String a[] arreglo){
+		int a, i, aux;
+		boolean band;
+		inta = arreglo.length;
+		while(inta > 0){
+			inta = inta / 2;
+			band = true;
+			while(band){
+				band = false;
+				i = 0;
+				while ((i+a) <=arreglo.length-1){
+					if (arreglo[i] > arreglo[i + a]){
+						aux = arreglo[i];
+						arreglo[i] = arreglo[i+ a];
+						arreglo[i+a] = aux;
+						band = true;
+					}
+					i = i +1;
+				}
+			}
+		}
+		return arreglo;
+	}
+}

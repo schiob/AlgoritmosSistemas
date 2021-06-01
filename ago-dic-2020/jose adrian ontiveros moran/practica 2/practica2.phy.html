@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>scratch.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+scratch.py</font>
+</center></td></tr></table>
+<pre><span class="s0">def </span><span class="s1">insertion_sort(problema):</span>
+
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(</span><span class="s2">1</span><span class="s0">, </span><span class="s1">len(problema)):</span>
+        <span class="s1">temp = problema[i]</span>
+        <span class="s1">j = i - </span><span class="s2">1</span>
+        <span class="s0">while </span><span class="s1">(j &gt;= </span><span class="s2">0 </span><span class="s0">and </span><span class="s1">temp &lt; problema[j]):</span>
+            <span class="s1">problema[j + </span><span class="s2">1</span><span class="s1">] = problema[j]</span>
+            <span class="s1">j = j - </span><span class="s2">1</span>
+        <span class="s1">problema[j + </span><span class="s2">1</span><span class="s1">] = temp</span>
+<span class="s1">problema = input(</span><span class="s3">'insertar los problemas '</span><span class="s1">).split()</span>
+<span class="s1">problema = [int(x) </span><span class="s0">for </span><span class="s1">x </span><span class="s0">in </span><span class="s1">problema]</span>
+<span class="s1">insertion_sort(problema)</span>
+<span class="s1">tiempo=</span><span class="s2">0</span><span class="s1">;</span>
+<span class="s1">contador=</span><span class="s2">0</span><span class="s1">;</span>
+<span class="s1">print(</span><span class="s3">'prblemas en orden '</span><span class="s0">, </span><span class="s1">end=</span><span class="s3">''</span><span class="s1">)</span>
+<span class="s1">print(problema)</span>
+
+<span class="s0">for </span><span class="s1">x </span><span class="s0">in </span><span class="s1">range(</span><span class="s2">0</span><span class="s0">, </span><span class="s1">len(problema)):</span>
+    <span class="s1">tiempo ++ int(problema[x])</span>
+    <span class="s0">if</span><span class="s1">(tiempo &lt;= int(x)):</span>
+        <span class="s1">contador ++ </span><span class="s2">1</span><span class="s1">;</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">print(contador)</span>
+        <span class="s0">break</span></pre>
+</body>
+</html>

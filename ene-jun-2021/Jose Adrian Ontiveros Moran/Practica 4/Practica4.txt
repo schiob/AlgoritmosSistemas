@@ -1,0 +1,9 @@
+dic={"RedStone":40,"Dirt":60,"Books":32,"Wood":12,"Stone":55,"Sand":43}
+    for j in range (1,len(dic)):
+        actual=dic[j]
+        i=j-1
+        while i>0 and dic [i]<actual
+            dic[i+1]=dic[i]
+            i-=1
+        dic[i+1]=actual
+print(dic.keys)
