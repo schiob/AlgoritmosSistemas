@@ -1,0 +1,39 @@
+package busquedasimple;
+import java.util.Scanner;
+
+public class BusquedaSimple {
+     public int buscar(String arreglo[], String lib){
+        boolean ubicar=false;
+        lib.trim();
+        for(int i=0; i<arreglo.length && ubicar == false; i++){
+         if (lib.equalsIgnoreCase(arreglo[i])) {
+          ubicar=true;
+          return i;
+          }
+        }
+        return -1;
+       }
+    public static void main(String[] args) {
+        Scanner e= new Scanner (System.in);
+        BusquedaSimple busc=new BusquedaSimple();
+        String arrlib[]={"",
+            "Calculo2Deitel",
+            "CalculoForDummies",
+            "AlgebraLineal",
+            "TeoriaDeNumeros",
+            "TheMangaGuideToCalculus"};
+        String bl;
+        int n,x;
+        n=arrlib.length;
+        System.out.println("Ingrese el nombre del libro");
+        bl=e.next();
+        x=busc.buscar(arrlib,bl);
+        if(x!=-1){
+            System.out.println(bl+" esta en la posicion "+x);
+        }else{
+            System.out.println("No se encontro el libro");
+        }
+       
+    }     
+    
+}

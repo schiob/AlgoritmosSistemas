@@ -1,0 +1,32 @@
+package numerosimpares;
+
+import java.util.Scanner;
+
+public class NumerosImpares {
+
+    public static void main(String[] args) {
+       Scanner e = new Scanner(System.in);
+       int lista[], i, tam;
+        System.out.println("Ingrese tamaño del arreglo");
+        tam= e.nextInt();
+        lista= new int [tam];
+        for(i=0;i<tam;i++){
+            //System.out.println("ingrese numero " +i);
+            lista[i]= (int)(Math.random()*100+1);
+        }
+        for(i=0;i<tam;i++){
+            System.out.print(lista[i]+"\t");  
+        } 
+        System.out.println();
+        System.out.println("-----------Numeros Pares--------");
+        for(i=0;i<tam;i++){
+            if(lista[i]%2==0){
+                System.out.println(lista[i]+ "\t");
+            }else{
+            lista[i]= ' ';
+            }
+                    
+        }
+    }
+    
+}

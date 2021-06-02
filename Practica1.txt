@@ -1,0 +1,32 @@
+package practica1;
+
+import java.util.Scanner;
+
+public class Practica1 {
+
+    public static void main(String[] args) {
+        Scanner e= new Scanner (System.in);
+        
+        int a, b, sum;
+        
+        System.out.println("Ingrese los valores:");
+        String[] num= e.nextLine().split(" ");
+        a= Integer.parseInt(num[0]);
+        b=Integer.parseInt(num[1]);
+                
+        if(0<= a && a<= 100){
+           if(0 <= b  && b <= 100){
+               sum= a+b ;
+           System.out.println("Resultado: " + sum);
+       }
+
+       else
+       {
+           System.out.println("Error al sumar");
+           }
+    }
+  } 
+}
+    
+    
+

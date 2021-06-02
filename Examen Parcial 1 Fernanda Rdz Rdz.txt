@@ -1,0 +1,71 @@
+package peliculas;
+
+import java.util.Scanner;
+
+
+public class Peliculas {
+    
+    void merge(int arr[], int inicio, int medio, int fin){
+        int a= medio - inicio + 1;
+        int b= fin - medio;
+        
+        int izq[]=new int[a];
+        int der[]=new int[b];
+        
+        for(int i=0;i<a;i++){
+            izq[i]=arr[inicio+1];
+        }
+        
+        for(int j=0;j<a;j++){
+            der[j]=arr[medio+1+j];
+        }
+        
+        int i=0, j=0;
+        int k= inicio;
+        while(i<a&&j<b){
+            if(izq[i]<=der[j]){
+                arr[k]=der[j];
+                j++;
+            }
+            k++;
+        }
+        while(i<a){
+            arr[k]=der[j];
+            j++;
+            k++;
+        }
+    }
+    
+    void sort(int arr[], int inicio, int fin){
+        if(inicio<fin){
+            int medio=(inicio+fin)/2;
+            sort(arr,inicio,fin);
+            sort(arr,medio+1,fin);
+            merge(arr,inicio,medio,fin);
+        }
+    
+    }
+    
+    public static void main(String[] args) {
+        Scanner e= new Scanner (System.in);
+        int n, i, arr[];
+        System.out.println("Ingrese el numero de peliculas");
+        n=e.nextInt();
+        arr= new int[n];
+        Peliculas p= new Peliculas();
+        p.sort(arr, 0, arr.length-1);
+          for(i=0;i<n;i++){
+            System.out.println("Ingrese numero entero");
+            arr[i]=e.nextInt();    
+        }
+        for(i=0;i<n;i++){
+            System.out.print(arr[i]+"\t");  
+        }  
+        
+        System.out.println("Arreglo Ordenado");
+        for(i=0; i<arr.length;i++){
+            System.out.println(arr[i]+"");
+        }
+    }
+    
+}

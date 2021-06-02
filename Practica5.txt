@@ -1,0 +1,38 @@
+package practica5;
+import java.util.Scanner;
+
+public class Practica5 {
+  public static void ord(String arr[]) {
+       for (int j = 0; j < arr.length; j++) {
+        for (int i = 0; i < arr.length - j; i++) {
+          if (arr[i].compareTo(arr[i + 1]) > 0) {
+            String aux;
+            aux = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = aux;
+            }
+        }
+      }
+    }
+    public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+         int n;
+         String[] nom;
+
+        System.out.println("Ingrese numero de palabras:");
+        n = e.nextInt();
+
+        nom= new String[n];
+        for (int i = 0; i < nom.length; i++) {
+            System.out.println("Nombre "+i+":");
+            nom[i] = e.next();
+            }
+           ord(nom);
+
+            for(int i=0;i<nom.length;i++){
+            System.out.print(nom[i] + " ");
+
+
+      }
+   } 
+}
