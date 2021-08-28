@@ -2,7 +2,7 @@
 Este parcial va a tener 2 ejercicios,  cada uno con valor de 8 puntos. Resuélvelos y súbelos a github.
 
 ## Problema 1 - Ordenando
-Perlita tiene una colección imprecionante de plumones y le gustaría ordenarlos para que pueda encontrarlos de forma más sencilla, pero también para que se vean bonitos. Perlita categoríza cada plumón con un color principal y un número que indica qué tan diluido está ese color, para hacer tonalidades más claras.
+Perlita tiene una colección impresionante de plumones y le gustaría ordenarlos para que pueda encontrarlos de forma más sencilla, pero también para que se vean bonitos. Perlita categoríza cada plumón con un color principal y un número que indica qué tan diluido está ese color, para hacer tonalidades más claras.
 
 Perlita quiere ordenar los plumones en el orden del arcoiris: `Rojo, Anaranjado, Amarillo, Verde, Indigo, Violeta, Azul`. Y dentro de cada color, usando el número del nivel de dilusión, ordenarlos de menor a mayor.
 
