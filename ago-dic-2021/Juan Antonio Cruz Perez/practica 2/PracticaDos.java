@@ -1,32 +1,22 @@
 package practicas;
 
+import java.util.Scanner;
+
 public class PracticaDos {
 
     public static void main(String[] args) {
         LinkedList lista = new LinkedList();
-
-        lista.preppend(3);
-        lista.preppend(43);
-        lista.preppend(2);
-        lista.preppend(5);
-        lista.preppend(4);
-        lista.preppend(6);
-        lista.preppend(5);
-        lista.preppend(4);
-        lista.preppend(334);
-        lista.preppend(45);
-        lista.preppend(23);
-        lista.preppend(123);
-        lista.preppend(323);
-        lista.preppend(45);
-        lista.preppend(34);
-        lista.preppend(23);
-        lista.preppend(43);
-        lista.preppend(5);
-        lista.preppend(46);
-        lista.preppend(78);
+        Scanner sw = new Scanner (System.in);
+        String s ="";
+//ingresar numeros a la lista separados por espacio
+                s = sw.nextLine();
+        String num[] = s.split("\\s+");
+             //total de probleas
+        for (int i = 0; i < num.length; i++) {
+            lista.preppend(Integer.parseInt(num[i]));
+        }
         
-        
+        System.out.println("--------------------- ");
         
         lista.imprimir();
 
