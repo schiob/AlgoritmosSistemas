@@ -4,24 +4,20 @@ import java.util.Scanner;
 
 public class practique5 {
     public static void main(String[] args) {
-Scanner l = new  Scanner(System.in);
+        Scanner l = new  Scanner(System.in);
         
         //cuantos libros son
         int n = l.nextInt();
         String s[] = new String [n];
-int arr [ ] = new int [n];
-         //cuantos libros tiene
-        /*inserto los libros separados por espacio en una cadena
-      */
+int arr [ ] = new int [n];  
         int arrI[] = new int [n];
         String arrS [] = new String [n];
         String h = l.nextLine();
         for (int i = 0; i < arr.length; i++) {
                     s[i] = l.nextLine();
         String [] librosc = s[i].split("\\s+");
-               arrS[i] = librosc[0];
-        //no entiendo que falla ahi profe estoy intentando meter en el numero de paginas del libro
-               arrI[i] = Integer.parseInt(librosc[1]);
+    arrI[i] = Integer.parseInt(librosc[1]);
+    arrS[i] = librosc[0];
         }
 
 
