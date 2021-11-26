@@ -15,7 +15,7 @@ int arr [ ] = new int [n];
       */
         int arrI[] = new int [n];
         String arrS [] = new String [n];
-        
+        String h = l.nextLine();
         for (int i = 0; i < arr.length; i++) {
                     s[i] = l.nextLine();
         String [] librosc = s[i].split("\\s+");
