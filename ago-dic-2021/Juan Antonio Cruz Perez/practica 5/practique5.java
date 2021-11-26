@@ -22,12 +22,12 @@ int arr [ ] = new int [n];
 
 
         String arrOrd [] = MergeSort(arrI,arrS);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.printf("%d" , arr[i]);
+        for (int i = 0; i < arrI.length; i++) {
+            System.out.printf("%d" , arrI[i]);
         }
         System.out.println();
         for (int i = 0; i < arrOrd.length; i++) {
-            System.out.printf("%d " , arrOrd[i]);         
+            System.out.printf("\n " + arrOrd[i]);         
         }
     }
     
