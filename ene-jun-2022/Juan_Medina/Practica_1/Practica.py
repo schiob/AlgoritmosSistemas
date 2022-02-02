@@ -8,7 +8,7 @@ if num1>-100:
     print("Numero de x valido")
 
 if num2<100:
-    print("Numero valido")
+    print("Numero de Y: valido")
 
 
 result = (num1+num2)
