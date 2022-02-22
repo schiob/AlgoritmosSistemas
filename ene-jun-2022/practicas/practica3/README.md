@@ -14,3 +14,6 @@ Ayúdale removiendo esos números e imprime la lista ordenada de mayor a menor.
 ```
 334 78 46 34 6 4 4 2
 ```
+
+## Notas
+Utilicen algún algoritmo de ordenamieno de los que vimos en clase
