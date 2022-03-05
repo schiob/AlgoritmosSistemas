@@ -1,9 +1,9 @@
 # Práctica 5 - Ordenando cartitas
-Un deck de cartas estandar tiene 52 cartas. Cada carta tiene un valor y un palo. Los valores son $A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K$. Los Palos son Espada, Corazón, Trebol y Diamante. Dada una mano de cartas tienes que ordenar la mano, ordena primero por valor y si hay dos cartas con el mismo valor ordena por palo. Usa el ordenamiento que está arriba.
+Un deck de cartas estandar tiene 52 cartas. Cada carta tiene un valor y un palo. Los valores son `A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K`. Los Palos son Espada, Corazón, Trebol y Diamante. Dada una mano de cartas tienes que ordenar la mano, ordena primero por valor y si hay dos cartas con el mismo valor ordena por palo. Usa el ordenamiento que está arriba.
 
 
 ## Input
-La entrada empieza con una linea conteniendo un entero positivo $H \le 300$ representado el numero de manos que siguen. Después hay $H$ lineas de manos, cada una empieza con un entero N, donde $1 \le N \le 52$, el número de cartas en la mano. En seguida las cartas separadas por espacio. 
+La entrada empieza con una linea conteniendo un entero positivo `H <= 300` representado el numero de manos que siguen. Después hay $H$ lineas de manos, cada una empieza con un entero N, donde `1 <= N <= 52`, el número de cartas en la mano. En seguida las cartas separadas por espacio. 
 
 Cada carta está representada por 2 caracteres:
 
