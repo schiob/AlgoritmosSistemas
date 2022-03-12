@@ -1,0 +1,89 @@
+
+
+
+
+
+
+package parcial.pkg1;
+import javax.swing.JOptionPane;
+public class opciones {
+    int c=0,u,h,r[];
+    String x,y,arreglo="",z,a,n[],t,arr="";
+    public opciones(){
+    }
+    public void e1(){
+/*
+A Juan le gustan mucho los dinosaurios y los nombres tan extraños que pueden tener, 
+algunos de esos nombres pueden ser muy largos, como Pachycephalosaurus, Manuel tiene una 
+lista con nombres de dinosaurios y quiere ordenarla de los nombres más largos a los más cortos.
+Ayuda a Manuel haciendo un programa que haga eso.
+ */
+        x=JOptionPane.showInputDialog("Introduce el número de dinosaurios.");
+        c=Integer.parseInt(x);
+        n=new String[c];
+            for (int i = 0; i < c; i++) {
+                a=JOptionPane.showInputDialog("Captura los nombres de los dinosaurios.");
+                n[i]=a;
+                
+            }  
+            for (int i = 0; i < c; i++) {
+            arreglo+=n[i]+" ";
+        }
+        JOptionPane.showMessageDialog(null,"Antes de ordenar\n"+arreglo);
+        
+        for (int i = 0; i < c; i++) {
+            for (int j = 1; j < c; j++) {
+                if(n[j-1].length() < n[j].length()){
+                    String nom=n[j-1];
+                    n[j-1]=n[j];
+                    n[j]=nom;
+                }
+            }
+        }
+            arreglo="";
+            for (int i = 0; i < c; i++) {
+            arreglo+=n[i]+" ";
+        }
+            JOptionPane.showMessageDialog(null,"Después de ordenar\n"+arreglo);
+        
+    }
+    public void e2(){
+        /*Consiste en varias lineas, la primera tiene un entero n 
+        representado el número de películas que usará Filomeno.
+        Después hay n líneas en la que cada una tiene un string y un dos enteros separados por espacio representando el
+        nombre de la película, el número de horas y minutos que tiene. */ 
+        n=new String[u];
+        r=new int[h];
+        z=JOptionPane.showInputDialog("Introduce el número de películas.");
+        u=Integer.parseInt(z);
+        n=new String[u];
+            for (int i = 0; i < u; i++) {
+                a=JOptionPane.showInputDialog("Captura los nombres de las películas.");
+                n[i]=a;
+                t=JOptionPane.showInputDialog("Introduce su duración dando 1o las horas y luego minutos.");
+                h=Integer.parseInt(t);
+                r[i]=h;
+            }  
+            for (int i = 0; i < u; i++) {
+            arreglo+=n[i]+" ";
+            arr+=r[i]+" ";
+        }
+        JOptionPane.showMessageDialog(null,"Antes de ordenar\n"+arreglo+arr);
+        
+        for (int i = 0; i < u; i++) {
+            for (int j = 1; j < u; j++) {
+                if(r[j-1] > r[j]){
+                    String nom=n[j-1];
+                    n[j-1]=n[j];
+                    n[j]=nom;
+                }
+            }
+        }
+            arreglo="";
+            for (int i = 0; i < u; i++) {
+            arreglo+=n[i]+" ";
+        }
+            JOptionPane.showMessageDialog(null,"Después de ordenar\n"+arreglo);
+        
+    }
+}
