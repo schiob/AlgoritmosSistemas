@@ -1,0 +1,134 @@
+
+package parcial.pkg2;
+import javax.swing.JOptionPane;
+public class Parcial2 {
+
+    public static void main(String[] args) {
+        int N, NV, NUV[];
+        String n, SN, nv, NOM[];
+            n=JOptionPane.showInputDialog("¿Cuántas sucursales acomodaras?");
+            N=Integer.parseInt(n);
+            NUV=new int[N];
+            NOM=new String[N];
+            for (int i = 0; i < N; i++) {
+                SN=JOptionPane.showInputDialog("¿Nombre?");
+                nv=JOptionPane.showInputDialog("¿Número de Ventas?");
+                //utilizas esos
+                NOM[i]=SN;
+                NUV[i]=Integer.parseInt(nv);
+            }
+            //imprimes
+            String salida="";
+            for (int i = 0; i < NUV.length; i++) {
+                salida+=NOM[i]+" "+NUV[i]+"\n";
+            }
+            JOptionPane.showMessageDialog(null, salida);
+            //Ordenar
+            int maxlength=(NUV[0]+"").length();
+            for (int i = 1; i < N; i++) {
+                if((NUV[i]+"").length()>maxlength) {
+                    maxlength=(NUV[i]+"").length();
+                }
+            }
+            
+            int bucket[][]=new int[10][NUV.length], elementos[]=new int [10];
+            String bucketnom[][]=new String[10][NUV.length];
+            int cifra=1;
+            for (int i = 0; i < maxlength; i++) {
+                for (int j = 0; j < NUV.length; j++) {
+                    int valor=(NUV[j]/cifra)%10;
+                    bucketnom[valor][elementos[valor]]=NOM[j];
+                    bucket[valor][elementos[valor]]=NUV[j];
+                    elementos[valor]++;
+                }
+                
+                int index=0;
+                for (int j = 0; j < 10; j++) {
+                    for (int k = 0; k < elementos[j]; k++) {
+                        NUV[index]=bucket[j][k];
+                        NOM[index]=bucketnom[j][k];
+                        index++;
+                    }
+                    elementos[j]=0;
+                }
+                cifra*=10;
+            }
+            
+            //imrpimir
+            salida="";
+            for (int i = 0; i < NUV.length; i++) {
+                salida+=NOM[i]+" "+NUV[i]+"\n";
+            }
+            JOptionPane.showMessageDialog(null, salida);
+        }
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package parcial.pkg2.pkg2;
+import java.util.LinkedList;
+import javax.swing.JOptionPane;
+
+public class Parcial22 {
+    
+    public static LinkedList<String> quicksort(LinkedList<String> x){
+        LinkedList<String> derecha=new LinkedList<String>(), izquierda=new LinkedList<String>(), resultado=new LinkedList<String>();
+        if(x.size()==0){
+            return x;
+        }
+        else{
+            String pivote=x.get(0);
+            for (int i = 1; i < x.size(); i++) {
+                if(x.get(i).codePointAt(0) > pivote.charAt(0)){
+                    derecha.add(x.get(i));
+                }
+                else{
+                    izquierda.add(x.get(i));
+                }
+            }
+            resultado.addAll(quicksort(izquierda));
+            resultado.add(pivote);
+            resultado.addAll(quicksort(derecha));
+            return resultado;
+        }
+    }
+    
+    public static void main(String[] args) {
+        LinkedList<String> canciones = new LinkedList<String>();
+        int n;
+        n=Integer.parseInt(JOptionPane.showInputDialog("¿Cuántas canciones tendrá tu lista?"));
+        for (int i = 0; i < n; i++) {
+            canciones.add(JOptionPane.showInputDialog("Nombre de la cacnión"));
+        }
+        JOptionPane.showMessageDialog(null, canciones);
+        canciones=quicksort(canciones);
+        JOptionPane.showMessageDialog(null, canciones);
+        n=Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas cancnioes buscará?"));
+        for (int i = 0; i < n; i++) {
+            String cancion=JOptionPane.showInputDialog("Nombre de la cancion");
+            JOptionPane.showMessageDialog(null, canciones.indexOf(cancion));
+        }
+    }
+    
+}
