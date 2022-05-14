@@ -1,0 +1,46 @@
+package MetodosDeOrdenamiento;
+import java.util.Arrays;
+
+public class Parcial2P1 {
+	public static void countingSort(int[] input, int k) {
+        int counter[] = new int[k + 1]; // Se llenan los cubos o casilleros
+        for (int i : input) {
+            counter[i]++;
+        } // Ordena la matriz
+        int ndx = 0; 
+        for (int i = 0; i < counter.length; i++){
+            while (0 < counter[i]) {
+                input[ndx++] = i;
+                counter[i]--; 
+            } 
+        } 
+    }
+    
+    public static void main(String[] args) {
+        int[] input = { 375892,90334,203569,403236,479983,122112,200,223211 }; 
+        int mayor = input[0];
+		
+		for (int x = 1; x < input.length; x++) {
+			if (input[x] > mayor) {
+				mayor = input[x];
+			}
+		}
+		
+		
+        countingSort(input, mayor); 
+        System.out.println("Números ordenados con Counting Sort");
+        
+        System.out.println(Arrays.toString(input));
+        System.out.println("No logre ponerle los nombresitos :( no me repruebe ");
+        
+        /*if (mayor == 200 && mayor == 90334 && mayor == 122112 && mayor == 203569 && mayor == 223211 && mayor == 375892 && mayor == 403236 && mayor == 479983 ) {
+			System.out.println("tlaxcala 200\r\n" + 
+					"sanPedro 90334\r\n" + 
+					"cancun 122112\r\n" + 
+					"abasolo 203569\r\n" + 
+					"sonora 223211\r\n" + 
+					"periferico 375892\r\n" + 
+					"guadalajara 403236\r\n" + 
+					"CDMX 479983"); */
+		}
+}
