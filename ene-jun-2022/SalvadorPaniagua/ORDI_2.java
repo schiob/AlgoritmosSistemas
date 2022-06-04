@@ -15,13 +15,13 @@ public class ORDI_2 {
 	{	int n;
 		String busqueda;
 		Scanner sc= new Scanner (System.in);
-		System.out.println("Número de artículos en la lista: ");
+		System.out.println("Numero de plumones: ");
 		n= sc.nextInt();
-		System.out.println("Artículo a buscar");
+		System.out.println("Plumones a buscar (incluya nombre-dilusion ");
 		busqueda= sc.next();
 		String articulos[]= new String [n];
 		for(int i=0; i<articulos.length; i++)
-		{	System.out.println("Articulo " + (i+1) + ":");
+		{	System.out.println("Plumon " + (i+1) + ":");
 			articulos[i]= sc.next();
 		}
 		
