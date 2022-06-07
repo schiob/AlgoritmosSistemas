@@ -1,0 +1,63 @@
+package MetodosDeOrdenamiento;
+import java.util.Arrays;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class OrdinarioP2 {
+		private static final String Cosas = null;
+
+		public static void main(String args[]) {
+	    
+	    /*int [] Precio= {70,200,1000,9000,15000,20000};
+	   // String B=JOptionPane.showInputDialog("Valor A bucar");
+	    int N=Integer.parseInt(JOptionPane.showInputDialog("Valor A bucar"));
+	    //int result = Arrays.binarySearch(Cosas,B);
+	    System.out.println();
+	     if (result < 0)
+            System.out.println("Element is not found!");
+        else
+            System.out.println("Element is found at index: "+result);
+	    
+	   int N=Integer.parseInt(JOptionPane.showInputDialog("Valor A bucar"));
+	    int resultado = Arrays.binarySearch(Precio,N);
+	    if (N==70) {
+	    	
+	    }*/
+        String[] Cosas = {"TacosPastor", "Teclado", "Audífonos", "NintendoSwitch", "Iphone","LaptopLenovo"};
+	    String busqueda = "Teclado";
+	    
+	    int indiceDelElementoBuscado = busquedaBinariaConWhile(Cosas, busqueda);
+	    System.out.println("El elemento buscado"+  indiceDelElementoBuscado);
+
+		}
+
+		public static int busquedaBinariaConWhile(String[] Cosas, String busqueda) {
+		    
+		    int izquierda = 0, derecha = Cosas.length - 1;
+		 
+		    while (izquierda <= derecha) {
+		        
+		        int indiceDelElementoDelMedio = (int) Math.floor((izquierda + derecha) / 2);
+		        String elementoDelMedio = Cosas[indiceDelElementoDelMedio];
+		 
+		        
+		        
+		        int resultadoDeLaComparacion = busqueda.compareTo(elementoDelMedio);
+		 
+		        
+		        if (resultadoDeLaComparacion == 0) {
+		            return indiceDelElementoDelMedio;
+		        }
+		 
+		 
+		        
+		       if (resultadoDeLaComparacion < 0) {
+		            derecha = indiceDelElementoDelMedio - 1;
+		        } else {
+		            izquierda = indiceDelElementoDelMedio + 1;
+		        }
+		    }
+		    
+		    return -1;
+		}
+		}
