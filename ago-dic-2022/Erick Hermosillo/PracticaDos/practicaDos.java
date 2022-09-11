@@ -21,7 +21,7 @@ public class practicaDos {
         for (int k = 0; k < numeroDeTareas; k++) {
         minutosDeLasTareas [k] = Integer.valueOf(minutosDeLasTareasString[k]);            
         }
-                  System.out.println("\n Los minutos de cada tarea son:");
+                  System.out.println("\nLos minutos de cada tarea son:");
       for(int elem:minutosDeLasTareas){
 
             System.out.printf("%d ", elem);    
@@ -41,15 +41,15 @@ public class practicaDos {
 //
 //            System.out.printf("%d ", elem);    
 //        }
-        if (sumaDeMinutos < minutosMaximos) {
+//        if (sumaDeMinutos < minutosMaximos) {
             for (int i = 0; i < minutosDeLasTareas.length; i++) {
                 sumaDeMinutos += minutosDeLasTareas[i];
-                if (sumaDeMinutos < minutosMaximos) {
+                if (sumaDeMinutos <= minutosMaximos) {
                   tareasPosibles++;  
                 }
                             
             }
-        }
+//        }
         System.out.println("\nEl maximo numero de tareas posibles a realizar son: "+tareasPosibles);
     }
 }
