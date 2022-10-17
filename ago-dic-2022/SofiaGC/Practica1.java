@@ -5,11 +5,10 @@ public class Practica1 {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Ingresa un numero");
-        int a = teclado.nextInt();
+        String entrada = teclado.nextLine();
+        String[] separacion = entrada.split(" ");
 
-        System.out.println("Ingresa un numero");
-        int b = teclado.nextInt();
 
-        System.out.println("La suma de a + b es =  " + (a+b));
+        System.out.println(Integer.parseInt(separacion[0])+Integer.parseInt(separacion[1]));
     }  
 }
