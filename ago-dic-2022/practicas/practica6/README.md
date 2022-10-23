@@ -44,4 +44,4 @@ Francisco
 
 ### Notas
 
-Puedes resolver el problema con cualquier algoritmo de ordenamiento.
+Resuelve con Quick Sort.
