@@ -72,8 +72,8 @@ public class practicaSeis {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingresar la cantidad de concursantes en las olimpiadas");
-        int numeroDeParticipantes = sc.nextInt();//La entrada del numero de medicamentos
-        String listaDeParticipantes[] = new String[numeroDeParticipantes];//Se crea el arreglo listaDeLibros, tiene como limite el numero de libros establecido en la linea anterior
+        int numeroDeParticipantes = sc.nextInt();//La entrada del numero de participantes
+        String listaDeParticipantes[] = new String[numeroDeParticipantes];//Se crea el arreglo listaDeParticipantes, tiene como limite el numero de participantes establecido en la linea anterior
         sc.nextLine();
         System.out.println("\nIngrese cada uno de los " + numeroDeParticipantes + " participantes, con su nombre, cantidad de medallas de oro, plata y bronce separadas por un espacio\nEjemplo: Monica 10 4 12\n");
         for (int i = 0; i < numeroDeParticipantes; i++) {
@@ -84,7 +84,7 @@ public class practicaSeis {
         String participantesOrdenados[] = ms.mergesort(listaDeParticipantes);
         System.out.println("\n\nLa lista ordenada de participantes es: ");
         for (String arreglordenadoXD1 : participantesOrdenados) {
-            System.out.printf(arreglordenadoXD1.split(" ")[0] + " "); //Separa los valores en 2 despues del espacio e imprime la primera parte (es decir, el titulo).
+            System.out.printf(arreglordenadoXD1.split(" ")[0] + " "); //Separa los valores en 4 despues del espacio e imprime la primera parte (es decir, el nombre del concursante).
         }
 
     }
