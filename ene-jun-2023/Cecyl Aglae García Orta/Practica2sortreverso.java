@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
-/*@author cecyl*/
+/*@author cecyl aglae garcia orta*/
 public class Práctica2 {
 
     public static void main(String[] args) {
