@@ -32,7 +32,7 @@ public class Practica_3 {
         for (int x = 0; x < arreglo.length; x++) {
             System.out.println("Ingrese los datos en la posicion " + x + " :");
 
-            arreglo[x] = sc.next();
+            arreglo[x] = sc.nextLine();
         }
         
         System.out.println("Arreglo Original: " + Arrays.toString(arreglo));
