@@ -4,11 +4,25 @@ import java.util.Scanner;
 
 /**
  *
- * @author ching
+ * @author Cancino
  */
 public class Parte2_examen1 {
 
-    public static void mergeSort(String[] arr, int l, int r) {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Numero de Peliculas: ");
+        int Ta = sc.nextInt();
+        String[][] matriz = new String[Ta][3];
+        for (int i = 0; i < Ta; i++) {
+            matriz[i][0] = sc.next();
+            matriz[i][1] = sc.next();
+            matriz[i][2] = sc.next();
+        }
+        mergeSort(matriz, 0, Ta - 1);
+        printMatriz(matriz, Ta);
+    }
+
+    private static void mergeSort(String[][] arr, int l, int r) {
         if (l < r) {
             int m = (l + r) / 2;
             mergeSort(arr, l, m);
@@ -17,73 +31,60 @@ public class Parte2_examen1 {
         }
     }
 
-    public static void merge(String[] arr, int l, int m, int r) {
+    private static void merge(String[][] arr, int l, int m, int r) {
         int n1 = m - l + 1;
         int n2 = r - m;
-        String[] L = new String[n1];
-        String[] R = new String[n2];
+        String[][] L = new String[n1][3];
+        String[][] R = new String[n2][3];
         for (int i = 0; i < n1; i++) {
-            L[i] = arr[l + i];
+            L[i][0] = arr[l + i][0];
+            L[i][1] = arr[l + i][1];
+            L[i][2] = arr[l + i][2];
         }
         for (int j = 0; j < n2; j++) {
-            R[j] = arr[m + 1 + j];
+            R[j][0] = arr[m + 1 + j][0];
+            R[j][1] = arr[m + 1 + j][1];
+            R[j][2] = arr[m + 1 + j][2];
         }
         int i = 0, j = 0, k = l;
         while (i < n1 && j < n2) {
-            if (compare(L[i], R[j]) <= 0) {
-                arr[k] = L[i];
+            int h1 = Integer.parseInt(L[i][1]);
+            int m1 = Integer.parseInt(L[i][2]);
+            int h2 = Integer.parseInt(R[j][1]);
+            int m2 = Integer.parseInt(R[j][2]);
+            if (h1 < h2 || (h1 == h2 && m1 < m2)) {
+                arr[k][0] = L[i][0];
+                arr[k][1] = L[i][1];
+                arr[k][2] = L[i][2];
                 i++;
             } else {
-                arr[k] = R[j];
+                arr[k][0] = R[j][0];
+                arr[k][1] = R[j][1];
+                arr[k][2] = R[j][2];
                 j++;
             }
             k++;
         }
         while (i < n1) {
-            arr[k] = L[i];
+            arr[k][0] = L[i][0];
+            arr[k][1] = L[i][1];
+            arr[k][2] = L[i][2];
             i++;
             k++;
         }
         while (j < n2) {
-            arr[k] = R[j];
+            arr[k][0] = R[j][0];
+            arr[k][1] = R[j][1];
+            arr[k][2] = R[j][2];
             j++;
             k++;
         }
     }
 
-    public static int compare(String c1, String c2) {
-
-        int v1 = c1.charAt(0);
-        int v2 = c2.charAt(0);
-        if (v1 == v2) {
-            int s1 = c1.charAt(1);
-            int s2 = c2.charAt(1);
-            return s1 - s2;
-        } else {
-            return v1 - v2;
+    public static void printMatriz(String[][] matriz, int Ta) {
+        for (int i = 0; i < Ta; i++) {
+            System.out.print(matriz[i][0] + " ");
         }
-    }
-
-    public static void printArreglo(String[] arreglo) {
-        for (int i = 0; i < arreglo.length; i++) {
-            System.out.print(arreglo[i] + " ");
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Numero de Peliculas: ");
-        int Ta = sc.nextInt();
-        String arreglo[] = new String[Ta];
-        for (int x = 0; x < Ta; x++) {
-            sc.nextLine();
-            System.out.print("Ingrese los nombres de dinosaurios separados por un espacio: ");
-            arreglo[x] = sc.nextLine();
-        }
-        printArreglo(arreglo);
-       
-
     }
 
 }

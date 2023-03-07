@@ -1,11 +1,10 @@
 package U1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  *
- * @author ching
+ * @author Cancino
  */
 public class Parte1_examen1 {
 
@@ -14,13 +13,14 @@ public class Parte1_examen1 {
         for (int i = 0; i < arreglo.length; i++) {
             aux = arreglo[i];
             int j = i - 1;
-            while (j >= 0 && arreglo[j].length() <  aux.length()) {
+            while (j >= 0 && arreglo[j].length() < aux.length()) {
                 arreglo[j + 1] = arreglo[j];
                 j--;
             }
             arreglo[j + 1] = aux;
         }
     }
+
     public static void printArreglo(String[] arreglo) {
         for (int i = 0; i < arreglo.length; i++) {
             System.out.print(arreglo[i] + " ");
@@ -36,10 +36,8 @@ public class Parte1_examen1 {
         String separador = " ";
         String[] arreglo = lista.split(separador);
 
-
         algoritmo(arreglo);
         printArreglo(arreglo);
-
 
     }
 
