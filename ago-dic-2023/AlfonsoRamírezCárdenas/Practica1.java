@@ -1,4 +1,3 @@
-package Algoritmos;
 
 import java.util.Scanner;
 
