@@ -1,0 +1,20 @@
+
+entrada = input("Ingresa dos enteros separados por un espacio: ")
+
+# Dividir la entrada en dos enteros
+numeros = entrada.split()
+
+# checar si se ingresaron dos números
+if len(numeros) != 2:
+    print("Por favor, ingresa dos números separados por un espacio.")
+else:
+    try:
+        # Convertir los valores ingresados a enteros
+        num1 = int(numeros[0])
+        num2 = int(numeros[1])
+        
+        # Calcular la suma de los enteros
+        suma = num1 + num2
+        
+        # Imprimir el resultado
+        print("La suma de",
