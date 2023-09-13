@@ -1,0 +1,89 @@
+package com.mycompany.suma;
+
+/**
+ *
+ * @author Warwin02
+ */
+ import java.util.Scanner;
+public class Practica_2_Chio {
+   
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa dos números separados por un espacio donde el primero sea el numero de problemas\n que tengas que hacer y el otro el tiempo que tienes disponible para hacerlos:");
+        String input = scanner.nextLine();
+
+        // Dividir la entrada en dos números
+        String[] numeros = input.split(" ");
+
+        if (numeros.length != 2) {
+            System.out.println("Debes ingresar exactamente dos números separados por un espacio.");
+            scanner.close();
+            return;
+        }
+
+        // Convertir los números a tipo entero
+        int numero1 = Integer.parseInt(numeros[0]);
+        int numero2 = Integer.parseInt(numeros[1]);
+        
+
+        //definiendo arreglo al tamaño de el numero de problemas de la tarea
+        int[] arreglo = new int[numero1];
+
+        System.out.print("Ingresa los tiempos que te tomaria resolver cada problema\n " + numero1 + " separados por espacios: ");
+        String elementos = scanner.nextLine();
+
+        // Dividir la entrada en un arreglo de cadenas usando espacio como separador
+        String[] numerosarreglo = elementos.split(" ");
+
+        if (numerosarreglo.length != numero1) {
+            System.out.println("Error: Debes ingresar exactamente " + numero1 + " números.");
+            scanner.close();
+            return;
+        }
+
+        // Convertir las cadenas en números y almacenarlos en el arreglo
+        for (int i = 0; i < numero1; i++) {
+            try {
+                arreglo[i] = Integer.parseInt(numerosarreglo[i]);
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Ingresa números válidos.");
+                scanner.close();
+                return;
+            }
+        }
+        
+        for (int j = 1; j < arreglo.length; j++) {
+            int num_en_mano = arreglo[j];
+            int i = j - 1;
+
+            while (i >= 0 && arreglo[i] > num_en_mano) {
+                arreglo[i + 1] = arreglo[i];
+                i--;
+            }
+
+            arreglo[i + 1] = num_en_mano;
+        }
+        // Sumar los elementos del arreglo y contar cuántos se sumaron 
+        //antes de pasarse si es que supero el tiempo
+        int suma = 0;
+        int elementosSumados = 0;
+        for (int i = 0; i < arreglo.length; i++) {
+            suma += arreglo[i];
+            elementosSumados++;
+
+            if (suma == numero2) {
+                break;
+            }
+            else if (suma>numero2){
+                elementosSumados--;
+                break;
+            }
+        }
+        // Mostrar el resultado
+        
+        System.out.println("este es el numero de problemas que podrias hacer " + elementosSumados + "\n justo en el tiempo o antes de sobrepasar tu tiempo disponible");
+        // Cierra el escáner
+        scanner.close();
+    }
+ }
