@@ -41,6 +41,7 @@ public class Tareas{
                     break; 
                 }//cuando se acba el tiempo
             }
+            //imprime los problemas de tarea que ya se hicieron
             System.out.println(prealizados);
             s.close();
     }
