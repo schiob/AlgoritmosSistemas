@@ -11,5 +11,8 @@ public class Suma {
 
         int suma = num1+num2;
         System.out.print("La suma es: "+suma);
+
+        s.close();
     }
+    
 }
