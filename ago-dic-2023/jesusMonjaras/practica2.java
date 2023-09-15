@@ -32,5 +32,6 @@ public class practica2 {
         }
         scn.close();
         System.out.println(mayorCantidad);
+        //Practica lista
     }
 }
