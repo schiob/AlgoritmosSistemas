@@ -6,7 +6,7 @@ cambiado = True
 while cambiado:
     cambiado = False
     for i in range(n - 1):
-        if numeros[i] > numeros[i + 1]:
+        if numeros[i] < numeros[i + 1]:
             numeros[i], numeros[i + 1] = numeros[i + 1], numeros[i]
             cambiado = True
             # Imprimir la lista después de cada intercambio
