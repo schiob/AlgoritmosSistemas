@@ -2,6 +2,8 @@ import java.util.Scanner;
 public class practica2 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+
+        System.out.print("[n][m]: ");
         String primeraEntrada = scn.nextLine();
 
         //n = el número de problemas que le encargaron de tarea
@@ -9,6 +11,7 @@ public class practica2 {
         String [] nm = primeraEntrada.split(" ");
         int minDisponibles = Integer.parseInt(nm[1]);
 
+        System.out.print("[minutos que le toma a david realizar cada problema]: ");
         String segundaEntrada = scn.nextLine();
         String [] minsXProblema = segundaEntrada.split(" "); //Cada uno de los minutos que le toma a David realizar dicho problema
 
@@ -31,7 +34,8 @@ public class practica2 {
             }            
         }
         scn.close();
-        System.out.println(mayorCantidad);
+        String resultado = mayorCantidad == 0 ? "0" : String.valueOf(mayorCantidad);
+        System.out.println(resultado);
         //Practica lista
     }
 }
