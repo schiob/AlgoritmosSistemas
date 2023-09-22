@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author Warwin02
+ */
+public class Practica3_SelectionSort {
+    public static void selectionSortMayorAMenor(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            int maxIndex = i;
+
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] > arr[maxIndex]) {
+                    maxIndex = j;
+                }
+            }
+
+            int temp = arr[i];
+            arr[i] = arr[maxIndex];
+            arr[maxIndex] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la cantidad de pokemon's a ordenar: ");
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Ingrese el pc del pokemon numero #" + (i + 1) + ": ");
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.println("Asi diste la entrada de tus pokemons:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+
+        selectionSortMayorAMenor(arr);
+
+        System.out.println("\ny estos son tus pokemons ordenados del mas poderoso al mas debil:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+
+        scanner.close();
+    }
+}
