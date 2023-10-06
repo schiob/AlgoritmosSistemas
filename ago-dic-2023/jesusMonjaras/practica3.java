@@ -27,8 +27,8 @@ public class practica3 {
             puntosxPokemon[menor] = String.valueOf(temp);
         }
 
-        for (String puntos : puntosxPokemon) {
-            System.out.print(puntos + " ");
+        for (int i = puntosxPokemon.length -1; i >= 0; i--) {
+            System.out.print(puntosxPokemon[i] + " ");
         }
     }
 }
