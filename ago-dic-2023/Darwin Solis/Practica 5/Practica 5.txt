@@ -1,0 +1,73 @@
+package com.mycompany.suma;
+
+/**
+ *
+ * @author Warwin02
+ */
+import java.util.Scanner;
+public class MergeSort {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese las palabras separadas por espacios:");
+        String input = scanner.nextLine();
+        String[] palabras = input.split(" ");
+
+        System.out.println("Lista original:");
+        printArray(palabras);
+
+        mergeSort(palabras);
+
+        System.out.println("\nLista ordenada por longitud:");
+        printArray(palabras);
+
+        scanner.close();
+    }
+
+    public static void mergeSort(String[] arr) {
+        if (arr == null || arr.length <= 1) {
+            return; // La lista ya está ordenada o está vacía
+        }
+
+        int mitad = arr.length / 2;
+        String[] izquierda = new String[mitad];
+        String[] derecha = new String[arr.length - mitad];
+
+        // Copia los elementos a las sub-listas
+        System.arraycopy(arr, 0, izquierda, 0, mitad);
+        System.arraycopy(arr, mitad, derecha, 0, arr.length - mitad);
+
+        // Llama recursivamente a mergeSort para ambas sub-listas
+        mergeSort(izquierda);
+        mergeSort(derecha);
+
+        // Combina las sub-listas ordenadas
+        merge(arr, izquierda, derecha);
+    }
+
+    public static void merge(String[] arr, String[] izquierda, String[] derecha) {
+        int i = 0, j = 0, k = 0;
+
+        while (i < izquierda.length && j < derecha.length) {
+            if (izquierda[i].length() <= derecha[j].length()) {
+                arr[k++] = izquierda[i++];
+            } else {
+                arr[k++] = derecha[j++];
+            }
+        }
+
+        while (i < izquierda.length) {
+            arr[k++] = izquierda[i++];
+        }
+
+        while (j < derecha.length) {
+            arr[k++] = derecha[j++];
+        }
+    }
+
+    public static void printArray(String[] arr) {
+        for (String palabras : arr) {
+            System.out.print(palabras + " ");
+        }
+        System.out.println();
+    }
+}
