@@ -1,7 +1,6 @@
-
 package Practicas;
-import java.util.Arrays;
 import java.util.Scanner;
+
 public class Practica_4 {
 
     public static void main(String[] args) {
@@ -16,7 +15,7 @@ public class Practica_4 {
             palabras[i] = sc.next();
         }
         
-        Arrays.sort(palabras); // Ordenamosv las palabras alfabéticamente
+        insertionSort(palabras); // Ordenamos las palabras con Insertion Sort
         
         // Imprimimos las palabras ordenadas
         System.out.println("Aqui estan las palabras ya ordenadas");
@@ -24,7 +23,19 @@ public class Practica_4 {
             System.out.print(palabras[i] + " ");
         }
     }
+    
+    public static void insertionSort(String[] array) {
+        for (int i = 1; i < array.length; i++) {
+            String key = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j].compareTo(key) > 0) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = key;
+        }
+    }
 
 }
-
- 
+//no se por que no me ordena correcto el ultimo numero :(
