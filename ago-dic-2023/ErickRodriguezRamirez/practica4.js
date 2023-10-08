@@ -1,8 +1,7 @@
 var arr = []; //se crea el arreglo
-var numero, palabra;
+var  palabra;
 //pedir el número de palabras mediante un ciclo
-numero = parseInt(prompt("Ingresa el número de palabras por agregar:"));
-for (var i = 0; i < numero; i++) {
+for (var i = 0; i < 5; i++) {
   palabra = prompt("Ingresa las palabras que quieres añadir:");
   arr.push(palabra);
 }
