@@ -1,10 +1,9 @@
 var arr = []; //se crea el arreglo
 var  palabra;
 //pedir el número de palabras mediante un ciclo
-for (var i = 0; i < 5; i++) {
   palabra = prompt("Ingresa las palabras que quieres añadir:");
   arr.push(palabra);
-}
+  var arr = palabra.split(" "); //se divide la línea usando el espacio como separadores
 //se aplica algoritmo de insertion sort para acomodar palabras de orden alfabetico
 for (var i = 1; i < arr.length; i++) {
   var k = arr[i];
