@@ -1,4 +1,4 @@
-un seleccionSort(arregloPalabras: MutableList<String>) {
+fun seleccionSort(arregloPalabras: MutableList<String>) {
     val n = arregloPalabras.size
 
     for (i in 0 until n - 1) {
