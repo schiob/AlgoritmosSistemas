@@ -1,0 +1,50 @@
+import java.util.Scanner;
+/**
+ *
+ * @author DELL
+ */
+public class DrogasProfe {
+public static void selectionSort(String[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j].compareTo(arr[minIndex]) < 0) {
+                    minIndex = j;
+                }
+            }
+
+            String temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese los medicamentos separados por espacio: ");
+        String input = scanner.nextLine();
+        String[] inputArray = input.split(" ");
+
+        int n = inputArray.length;
+        String[] arr = new String[n];
+
+        // Copiar los elementos del inputArray al arr
+        for (int i = 0; i < n; i++) {
+            arr[i] = inputArray[i];
+        }
+
+        // Ordenar el arreglo alfabéticamente de A a Z
+        selectionSort(arr);
+
+        System.out.println("Medicamentos ordenados en orden alfabetico: ");
+        for (String element : arr) {
+            System.out.println(element);
+        }
+
+        scanner.close();
+    }
+}

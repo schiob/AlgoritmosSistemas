@@ -1,0 +1,92 @@
+/**
+ *
+ * @author DELL
+ */
+import java.util.Scanner;
+
+public class Libro {
+    private String titulo;
+    private int numPaginas;
+
+    public Libro(String titulo, int numPaginas) {
+        this.titulo = titulo;
+        this.numPaginas = numPaginas;
+    }
+
+    public static void mergeSort(Libro[] libros, int inicio, int fin) {
+        if (inicio < fin) {
+            int medio = (inicio + fin) / 2;
+            mergeSort(libros, inicio, medio);
+            mergeSort(libros, medio + 1, fin);
+            merge(libros, inicio, medio, fin);
+        }
+    }
+
+    public static void merge(Libro[] libros, int inicio, int medio, int fin) {
+        int n1 = medio - inicio + 1;
+        int n2 = fin - medio;
+
+        Libro[] mitadIzquierda = new Libro[n1];
+        Libro[] mitadDerecha = new Libro[n2];
+
+        for (int i = 0; i < n1; i++) {
+            mitadIzquierda[i] = libros[inicio + i];
+        }
+        for (int i = 0; i < n2; i++) {
+            mitadDerecha[i] = libros[medio + 1 + i];
+        }
+
+        int i = 0, j = 0, k = inicio;
+        while (i < n1 && j < n2) {
+            if (mitadIzquierda[i].numPaginas <= mitadDerecha[j].numPaginas) {
+                libros[k++] = mitadIzquierda[i++];
+            } else {
+                libros[k++] = mitadDerecha[j++];
+            }
+        }
+
+        while (i < n1) {
+            libros[k++] = mitadIzquierda[i++];
+        }
+
+        while (j < n2) {
+            libros[k++] = mitadDerecha[j++];
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("¿Cuántos libros desea ingresar? ");
+        int cantidadLibros = scanner.nextInt();
+        scanner.nextLine();  // Limpia el buffer del Enter
+
+        Libro[] libros = new Libro[cantidadLibros];
+
+        for (int i = 0; i < cantidadLibros; i++) {
+            System.out.print("Ingrese el título y número de páginas del libro #" + (i + 1) + " (separados por un espacio): ");
+            String input = scanner.nextLine();
+            String[] partes = input.split(" ");
+
+            if (partes.length != 2) {
+                System.out.println("Entrada incorrecta. Por favor, ingrese el título y el número de páginas separados por un espacio.");
+                i--;  // Restar 1 al contador para repetir la entrada del libro.
+                continue;
+            }
+
+            String titulo = partes[0];
+            int numPaginas = Integer.parseInt(partes[1]);
+
+            libros[i] = new Libro(titulo, numPaginas);
+        }
+
+        mergeSort(libros, 0, libros.length - 1);
+
+        System.out.println("Títulos de libros ordenados por número de páginas (de menor a mayor):");
+        for (Libro libro : libros) {
+            System.out.println(libro.titulo);
+        }
+
+        scanner.close();
+    }
+}
