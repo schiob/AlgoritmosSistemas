@@ -25,7 +25,7 @@ ChevroletMalibu 110000
 ### Salida
 
 ```
-FordMustang HondaCivic ChevroletMalibu ToyotaCamry
+ToyotaCamry ChevroletMalibu HondaCivic FordMustang
 ```
 
 ## Notas
