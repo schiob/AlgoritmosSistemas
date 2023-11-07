@@ -17,8 +17,7 @@ def quicksort(numeros):
     return quicksort(menor) + [pivot] + quicksort(mayor)
 
 
-numero_de_carros = 4  # cambiar
-
+numero_de_carros = int(input("Numero de autos: "))
 carro = []
 kilometraje = []
 
@@ -39,4 +38,4 @@ for i in range(len(kilometraje_ordenado)):
             kilometraje.pop(j)
             break
 
-print(carros_ordenados)
+print(*carros_ordenados)
