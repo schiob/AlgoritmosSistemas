@@ -1,0 +1,65 @@
+public class Autos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la cantidad de autos: ");
+        int n = scanner.nextInt();
+        scanner.nextLine(); // Consumir la nueva línea pendiente
+
+        String[] autos = new String[n];
+        int[] kilometraje = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Ingrese el nombre del auto y su kilometraje (separados por un espacio): ");
+            String[] input = scanner.nextLine().split(" ");
+            if (input.length != 2) {
+                System.out.println("Entrada no válida. Deben ser dos valores separados por espacio.");
+                i--;
+                continue;
+            }
+            autos[i] = input[0];
+            kilometraje[i] = Integer.parseInt(input[1]);
+        }
+
+        quickSort(kilometraje, autos, 0, n - 1);
+
+        System.out.println("Autos ordenados por kilometraje (de mayor a menor):");
+        for (int i = 0; i < n; i++) {
+            System.out.println(autos[i]);
+        }
+    }
+
+    public static void quickSort(int[] arr, String[] autos, int low, int high) {
+        if (low < high) {
+            int pivotIndex = partition(arr, autos, low, high);
+            quickSort(arr, autos, low, pivotIndex - 1);
+            quickSort(arr, autos, pivotIndex + 1, high);
+        }
+    }
+
+    public static int partition(int[] arr, String[] autos, int low, int high) {
+        int pivot = arr[high];
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (arr[j] >= pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+
+                String tempAuto = autos[i];
+                autos[i] = autos[j];
+                autos[j] = tempAuto;
+            }
+        }
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+
+        String tempAuto = autos[i + 1];
+        autos[i + 1] = autos[high];
+        autos[high] = tempAuto;
+
+        return i + 1;
+    }
+}
