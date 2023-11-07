@@ -24,23 +24,19 @@ public class Parcial2 {
     }
 
     static int partition(Auto[] autos, int low, int high) {
-        // Eligiendo el último elemento como pivote
         Auto pivot = autos[high];
-        int i = (low - 1); // Índice de menor elemento
+        int i = (low - 1); 
 
         for (int j = low; j < high; j++) {
-            // Si el elemento actual es mayor que el pivote
             if (autos[j].kilometraje >= pivot.kilometraje) {
                 i++;
 
-                // Intercambiar autos[i] y autos[j]
                 Auto temp = autos[i];
                 autos[i] = autos[j];
                 autos[j] = temp;
             }
         }
 
-        // Intercambiar autos[i+1] y autos[high] (o el pivote)
         Auto temp = autos[i + 1];
         autos[i + 1] = autos[high];
         autos[high] = temp;
@@ -51,7 +47,7 @@ public class Parcial2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        scanner.nextLine(); // Consumir el salto de línea restante
+        scanner.nextLine(); 
 
         Auto[] autos = new Auto[n];
 
