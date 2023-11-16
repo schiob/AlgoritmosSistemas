@@ -1,4 +1,4 @@
-def ordenar_cuenta(lista, exp):
+def ordenar_cue(lista, exp):
     n = len(lista)
     resultado = [0] * n
     conteo = [0] * 10
@@ -24,7 +24,7 @@ def radix_sort(lista):
     maximo = max(lista)
     exp = 1
     while maximo // exp > 0:
-        ordenar_cuenta(lista, exp)
+        ordenar_cue(lista, exp)
         exp *= 10
 
 if __name__ == "__main__":
