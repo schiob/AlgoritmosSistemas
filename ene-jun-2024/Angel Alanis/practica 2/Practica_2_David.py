@@ -8,29 +8,30 @@ def Insertion_Order(arr):
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = x
-        
+
+def Problemas_que_podra_resolver(problemas_resueltos):
+    # variables de conteo
+    x = 0 # x es la variable temporal del tiempo utilizado 
+
+    for i in tiempos_problemas:#i es el tiempo
+        print("suma de tiempos5",i)
+        if x + i <= m:
+            problemas_resueltos += 1
+            x += i
+        else:
+            break
+
+    print(problemas_resueltos)        
+
 #entradas 
 n, m = map(int, input("Ingresar las tareas de David, y los minutos disponibles: ").split(" "))
+problemas_resueltos = 0
 
 # Limitar la cantidad de elementos ingresados a n
 tiempos_problemas = []
+
 for i in range(n):
     tiempos_problemas.append(int(input("Ingresar los minutos de cada tarea que tiene David: ")))
 
-# Ahora tiempos_problemas contendrá exactamente n elementos
-
 Insertion_Order(tiempos_problemas)
-
-# variables de conteo
-problemas_resueltos = 0
-x = 0 # x es la variable temporal del tiempo utilizado 
-
-for i in tiempos_problemas:#i es el tiempo
-    print("suma de tiempos5",i)
-    if x + i <= m:
-        problemas_resueltos += 1
-        x += i
-    else:
-        break
-
-print(problemas_resueltos)
+Problemas_que_podra_resolver(problemas_resueltos) 
