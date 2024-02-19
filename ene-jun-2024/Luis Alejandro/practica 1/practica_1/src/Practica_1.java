@@ -16,6 +16,5 @@ public class Practica_1 {
 
         System.out.println(suma);
 
-
 	}
 }
