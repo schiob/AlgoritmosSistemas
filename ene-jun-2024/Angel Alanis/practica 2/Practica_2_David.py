@@ -14,7 +14,6 @@ def Problemas_que_podra_resolver(problemas_resueltos):
     x = 0 # x es la variable temporal del tiempo utilizado 
 
     for i in tiempos_problemas:#i es el tiempo
-        print("suma de tiempos5",i)
         if x + i <= m:
             problemas_resueltos += 1
             x += i
@@ -23,15 +22,16 @@ def Problemas_que_podra_resolver(problemas_resueltos):
 
     print(problemas_resueltos)        
 
+if __name__ == "__main__":
 #entradas 
-n, m = map(int, input("Ingresar las tareas de David, y los minutos disponibles: ").split(" "))
-problemas_resueltos = 0
+    n, m = map(int, input("Ingresar las tareas de David, y los minutos disponibles: ").split(" "))
+    problemas_resueltos = 0
 
-# Limitar la cantidad de elementos ingresados a n
-tiempos_problemas = []
+    # Limitar la cantidad de elementos ingresados a n
+    tiempos_problemas = []
 
-for i in range(n):
-    tiempos_problemas.append(int(input("Ingresar los minutos de cada tarea que tiene David: ")))
+    for i in range(n):
+        tiempos_problemas.append(int(input("Ingresar los minutos de cada tarea que tiene David: ")))
 
-Insertion_Order(tiempos_problemas)
-Problemas_que_podra_resolver(problemas_resueltos) 
+    Insertion_Order(tiempos_problemas)
+    Problemas_que_podra_resolver(problemas_resueltos) 
