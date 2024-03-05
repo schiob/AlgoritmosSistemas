@@ -11,9 +11,9 @@ if __name__ == "__main__":
     n = int(input("Ingrese el número de medicamentos: "))
 
     medicamentos = []
-
+    print("ingrese el nombre de los medicamentos")
     for i in range(n):
-        nombre_medicamento = input("Ingrese el nombre del medicamento {}: ".format(i + 1))
+        nombre_medicamento = input(())
         medicamentos.append(nombre_medicamento)
 
     selection_order(medicamentos)
