@@ -2,14 +2,14 @@ def valores(cartas):
     valores={'A':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,}
     return valores[cartas[0]]
 
-def mergesort(manos):
+def mergesort(arr):
     
-    if len(manos)==1:
+    if len(arr)==1:
         return manos
 
-    middle= len(lineas_manos) // 2
-    arr_izq=manos[:middle]
-    arr_der=manos[middle:]
+    middle= len(arr) // 2
+    arr_izq=arr[:middle]
+    arr_der=arr[middle:]
 
     print(arr_izq)
     print(arr_der)
