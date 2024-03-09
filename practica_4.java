@@ -29,7 +29,7 @@ public class practica_4 {
 
         int k = l;
         while (i < n1 && j < n2) {
-            if (valorCarta(L[i]) < valorCarta(R[j]) || (valorCarta(L[i]) == valorCarta(R[j]) && paloCarta(L[i]) < paloCarta(R[j]))) {
+            if (valor_Carta(L[i]) < valor_Carta(R[j]) || (valor_Carta(L[i]) == valor_Carta(R[j]) && paloCarta(L[i]) < paloCarta(R[j]))) {
                 arr[k] = L[i];
                 i++;
             } else {
@@ -52,7 +52,7 @@ public class practica_4 {
         }
     }
 
-    static int valorCarta(String[] carta) {
+    static int valor_Carta(String[] carta) {
         String valor = carta[0];
         switch (valor) {
             case "A":
@@ -96,7 +96,7 @@ public class practica_4 {
             }
             System.out.println();
         }
-
+        
         scanner.close();
     }
 }
