@@ -1,0 +1,66 @@
+def ordenar(arr2):
+    tamaño = len(arr2)
+    if tamaño > 0:
+        quick_sort(arr2, 0, tamaño - 1)
+
+def quick_sort(lista, inicio, fin):
+    if inicio > fin:
+        return
+    anterior = inicio
+    posterior = fin
+    temp = lista[inicio]
+
+    while anterior < posterior:
+        while anterior < posterior and arr2[posterior] > temp:
+            posterior = posterior - 1
+
+        if anterior < posterior:
+            arr2[anterior] = arr2[posterior]
+            anterior = anterior + 1
+
+        while anterior < posterior and arr2[anterior] <= temp:
+            anterior = anterior + 1
+
+        if anterior < posterior:
+            arr2[posterior] = arr2[anterior]
+            posterior = posterior - 1
+
+        arr2[anterior] = temp
+
+    quick_sort(arr2, inicio, anterior - 1)
+    quick_sort(arr2, anterior + 1, fin)
+
+if __name__ == "__main__":
+    print("Introduce el número de canciones en la playlist y el número de peticiones que se hará")
+    temp = input()
+    arr = temp.split(' ')
+
+    print("Introduce el nombre de las canciones separadas por un espacio")
+    temp = input()
+    arr2 = temp.split(' ')
+
+    print("Introduce el nombre de las canciones que buscas separadas por un espacio")
+    temp = input()
+    arr3 = temp.split(' ')
+
+    print(arr2)
+
+    ordenar(arr2)
+
+    print(arr2)
+
+    print(arr3)
+    o=0
+    i=0
+    while arr3[o] != o:
+        if arr3[o] == arr2[i]:
+            o+1
+            print(i+1)
+            break
+        else:
+            i+1
+        if len(arr2) != i:
+            i=0
+            continue
+
+
