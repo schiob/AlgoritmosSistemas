@@ -9,6 +9,7 @@ public class Practica2 {
         String a = sc.nextLine();
         String [] partes = a.split(" ");
         int problemas = Integer.parseInt(partes[0]);
+        @SuppressWarnings("unused")
         int tiempo = Integer.parseInt(partes[1]);
         int ord[] = new int [problemas];
 
