@@ -1,0 +1,8 @@
+entrada = input("Ingrese dos números separados con un espacio: ")
+numero1, numero2 = entrada.split()
+
+numero1 = int(numero1)
+numero2 = int(numero2)
+suma = numero1 + numero2
+
+print("Su suma es:", suma)
