@@ -23,15 +23,16 @@ public class Ejercicio1 {
 		
 		
 		for (int i = 1; i < arr.length; i++) {
-            String aux = arr[i];
-            int j = i - 1;
+           		 String aux = arr[i];
+         		   int j = i - 1;
 
-            while (j >= 0 && arr[j].compareTo(aux) > 0) {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            arr[j + 1] = aux;
-        }
+       		     while (j >= 0 && arr[j].compareTo(aux) > 0) {
+            		    arr[j + 1] = arr[j];
+			    j--;
+          		  }
+			arr[j + 1] = aux;
+     		  
+		}
 		System.out.println("\nElementos acomodados alfabeticamente");
 		for(String ele: arr) {
 			System.out.print(ele+" ");
