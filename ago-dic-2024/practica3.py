@@ -18,3 +18,4 @@ selection_sort_desc(powers)
 
 # Imprimir la lista ordenada
 print(" ".join(map(str, powers)))
+
