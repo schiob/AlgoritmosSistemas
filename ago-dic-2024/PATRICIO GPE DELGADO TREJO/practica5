@@ -1,0 +1,45 @@
+def merge_sort_libros(libros):
+    if len(libros) > 1:
+        mitad = len(libros) // 2
+        mitad_izquierda = libros[:mitad]
+        mitad_derecha = libros[mitad:]
+
+        merge_sort_libros(mitad_izquierda)
+        merge_sort_libros(mitad_derecha)
+
+        i = j = k = 0
+
+        while i < len(mitad_izquierda) and j < len(mitad_derecha):
+            if mitad_izquierda[i][1] < mitad_derecha[j][1]:
+                libros[k] = mitad_izquierda[i]
+                i += 1
+            else:
+                libros[k] = mitad_derecha[j]
+                j += 1
+            k += 1
+
+        while i < len(mitad_izquierda):
+            libros[k] = mitad_izquierda[i]
+            i += 1
+            k += 1
+
+        while j < len(mitad_derecha):
+            libros[k] = mitad_derecha[j]
+            j += 1
+            k += 1
+
+n = int(input("Ingrese el número de libros y el nombre con sus paginas "))
+libros = []
+
+for _ in range(n):
+    libro = input().split()
+    titulo = libro[0]
+    paginas = int(libro[1])
+    libros.append((titulo, paginas))
+
+merge_sort_libros(libros)
+
+libros_ordenados = [libro[0] for libro in libros]
+print("\n libros ordenados")
+print(" ".join(libros_ordenados))
+#Ingrese el título y el número de páginas del libro separados por un espacio: 
